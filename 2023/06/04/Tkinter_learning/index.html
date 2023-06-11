@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+
+    
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>窗口可视化tkinter学习笔记 | Saffron</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="前端" />
+  
+  
+  
+  
+  <meta name="description" content="学习Tkinter的记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="窗口可视化Tkinter学习笔记">
+<meta property="og:url" content="http://example.com/2023/06/04/Tkinter_learning/index.html">
+<meta property="og:site_name" content="Saffron">
+<meta property="og:description" content="学习Tkinter的记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.ytimg.com/vi/Qd-jJjduWeQ/maxresdefault.jpg">
+<meta property="article:published_time" content="2023-06-04T19:28:58.098Z">
+<meta property="article:modified_time" content="2023-06-11T18:12:15.436Z">
+<meta property="article:author" content="zyzhou">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.ytimg.com/vi/Qd-jJjduWeQ/maxresdefault.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Saffron" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/favicon.jpeg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/css/hiero.css" >
+  <link rel="stylesheet" href="/css/glyphs.css" >
+  
+    <link rel="stylesheet" href="/css/vdonate.css" >
+  
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/css/my.css">
+
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/"] = "Home"; 
+
+  themeMenus["/archives"] = "Archives"; 
+
+  themeMenus["/categories"] = "Categories"; 
+
+  themeMenus["/tags"] = "Tags"; 
+
+  themeMenus["/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/" title="Saffron" rel="home"> Saffron </a>
+            
+          </h1>
+
+          
+            <div class="site-description">dum spiro,spero.</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-Tkinter_learning" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" target="_blank" href="https://i.ytimg.com/vi/Qd-jJjduWeQ/maxresdefault.jpg" rel="gallery_clis0mznh0007alr9fo40e1bb noopener">
+        <img src="https://i.ytimg.com/vi/Qd-jJjduWeQ/maxresdefault.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      窗口可视化Tkinter学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2023/06/04/Tkinter_learning/" class="article-date">
+	  <time datetime="2023-06-04T19:28:58.098Z" itemprop="datePublished">六月 4, 2023</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p><strong>copyright@zyzhou</strong></p>
+</blockquote>
+<hr>
+<span id="more"></span>
+<h2 id="Chap1-写一个窗口"><a href="#Chap1-写一个窗口" class="headerlink" title="Chap1. 写一个窗口"></a>Chap1. 写一个窗口</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk<span class="comment">#导入库</span></span><br><span class="line">window = tk.Tk()<span class="comment">#创建窗口</span></span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)<span class="comment">#设置窗口名称</span></span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)<span class="comment">#设置窗口大小</span></span><br><span class="line">var=tk.StringVar()<span class="comment">#设置要显示的文本是字符串</span></span><br><span class="line">l = tk.Label(window, textvariable = var,bg = <span class="string">&#x27;green&#x27;</span>,font=(<span class="string">&#x27;Arial&#x27;</span>))<span class="comment">#设置标签</span></span><br><span class="line">l.pack()<span class="comment">#放置标签</span></span><br><span class="line">on_hit = <span class="literal">False</span><span class="comment">#设置逻辑：点击按钮显示，再点击不显示</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">hit_me</span>():</span><br><span class="line">    <span class="keyword">global</span> on_hit</span><br><span class="line">    <span class="keyword">if</span> on_hit == <span class="literal">False</span>:</span><br><span class="line">        on_hit = <span class="literal">True</span></span><br><span class="line">        var.<span class="built_in">set</span>(<span class="string">&#x27;you hit me&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        on_hit = <span class="literal">False</span></span><br><span class="line">        var.<span class="built_in">set</span>(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">b = tk.Button(window, text=<span class="string">&#x27;hit me&#x27;</span>, width=<span class="number">15</span>, height=<span class="number">2</span>, command=hit_me)<span class="comment">#设置按钮</span></span><br><span class="line">b.pack()<span class="comment">#放置</span></span><br><span class="line">window.mainloop()<span class="comment">#设置程序持续运行，启动窗口主循环</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>用到的函数</strong>  </p>
+<ol>
+<li>tk.Tk()</li>
+<li>tittle()</li>
+<li>geometry()</li>
+<li>tk.StringVar()</li>
+<li>tk.Label()</li>
+<li>.pack()</li>
+<li>.set()</li>
+<li>tk.button()</li>
+</ol>
+<h2 id="Chap2-输入框-entry，文本框-text"><a href="#Chap2-输入框-entry，文本框-text" class="headerlink" title="Chap2. 输入框 entry，文本框 text"></a>Chap2. 输入框 entry，文本框 text</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk<span class="comment">#导入库</span></span><br><span class="line">window = tk.Tk()<span class="comment">#创建窗口</span></span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)<span class="comment">#设置窗口名称</span></span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)<span class="comment">#设置窗口大小</span></span><br><span class="line">var=tk.StringVar()<span class="comment">#设置要显示的文本是字符串</span></span><br><span class="line">e=tk.Entry(window,show=<span class="string">&#x27;*&#x27;</span>)</span><br><span class="line">e.pack()</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">insert_point</span>():</span><br><span class="line">    var=e.get()</span><br><span class="line">    t.insert(<span class="string">&#x27;insert&#x27;</span>,var )</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">insert_end</span>():</span><br><span class="line">    var=e.get()</span><br><span class="line">    t.insert(<span class="string">&#x27;end&#x27;</span>,var)</span><br><span class="line">b1=tk.Button(window, text=<span class="string">&#x27;insert point&#x27;</span>, width=<span class="number">15</span>, height=<span class="number">2</span>, command=insert_point)<span class="comment">#设置按钮</span></span><br><span class="line">b1.pack()<span class="comment">#放置</span></span><br><span class="line">b2=tk.Button(window,text=<span class="string">&#x27;insert end&#x27;</span>,width=<span class="number">15</span>, height=<span class="number">2</span>,command=insert_end)</span><br><span class="line">b2.pack()</span><br><span class="line">t=tk.Text(window,height=<span class="number">2</span>)</span><br><span class="line">t.pack()</span><br><span class="line">window.mainloop()<span class="comment">#设置程序持续运行，启动窗口主循环</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>用到的函数</strong>  </p>
+<ol>
+<li>tk.Entry()</li>
+<li>.get()</li>
+<li>.insert()</li>
+<li>tk.Text()</li>
+</ol>
+<h2 id="Chap3-列表"><a href="#Chap3-列表" class="headerlink" title="Chap3. 列表"></a>Chap3. 列表</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#做一个列表</span></span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk<span class="comment">#导入库</span></span><br><span class="line">window = tk.Tk()<span class="comment">#创建窗口</span></span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)<span class="comment">#设置窗口名称</span></span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)<span class="comment">#设置窗口大小</span></span><br><span class="line">var1=tk.StringVar()<span class="comment">#设置变量</span></span><br><span class="line">var2=tk.StringVar()</span><br><span class="line"><span class="comment">#设置显示窗口</span></span><br><span class="line">l=tk.Label(window,bg=<span class="string">&#x27;yellow&#x27;</span>,width=<span class="number">4</span>,textvariable=var1,fg=<span class="string">&#x27;blue&#x27;</span>)</span><br><span class="line">l.pack()</span><br><span class="line"><span class="comment">#设置窗口button</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_selection</span>():</span><br><span class="line">    selected_items = lb.curselection()</span><br><span class="line">    <span class="keyword">if</span> selected_items:</span><br><span class="line">        value=lb.get(selected_items[<span class="number">0</span>])</span><br><span class="line">        var1.<span class="built_in">set</span>(value)</span><br><span class="line">b1=tk.Button(window, text=<span class="string">&#x27;print selection&#x27;</span>, width=<span class="number">15</span>, height=<span class="number">2</span>, command=print_selection)<span class="comment">#设置按钮</span></span><br><span class="line">b1.pack()<span class="comment">#放置</span></span><br><span class="line"></span><br><span class="line">var2.<span class="built_in">set</span>([<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>])</span><br><span class="line">lb=tk.Listbox(window,listvariable=var2)</span><br><span class="line">list_items=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]  </span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> list_items:</span><br><span class="line">    lb.insert(<span class="string">&#x27;end&#x27;</span>,item)</span><br><span class="line">lb.insert(<span class="number">1</span>,<span class="string">&#x27;first&#x27;</span>)</span><br><span class="line">lb.insert(<span class="number">2</span>,<span class="string">&#x27;second&#x27;</span>)</span><br><span class="line">lb.delete(<span class="number">2</span>)</span><br><span class="line">lb.pack() </span><br><span class="line">window.mainloop()<span class="comment">#设置程序持续运行，启动窗口主循环</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><input disabled type="checkbox"> 未选择的时候进行跳出提示请选择</li>
+</ul>
+<p><strong>功能：输入的内容进入列表</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 功能：输入的内容进入列表</span></span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line">window = tk.Tk()</span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)</span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)</span><br><span class="line">var1=tk.StringVar()</span><br><span class="line">var2=tk.StringVar()</span><br><span class="line"><span class="comment">#设置显示窗口</span></span><br><span class="line">l=tk.Entry(window,show=<span class="literal">None</span>)</span><br><span class="line">l.pack()</span><br><span class="line"><span class="comment">#设置窗口button</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_list</span>():</span><br><span class="line">    var1=l.get()</span><br><span class="line">    lb.insert(<span class="string">&#x27;end&#x27;</span>,var1)</span><br><span class="line">b1=tk.Button(window, text=<span class="string">&#x27;transfer&#x27;</span>, width=<span class="number">15</span>, height=<span class="number">2</span>, command=print_list)<span class="comment">#设置按钮</span></span><br><span class="line">b1.pack()</span><br><span class="line">lb=tk.Listbox(window,width=<span class="number">10</span>, height=<span class="number">10</span>)<span class="comment">#输出框（列表）</span></span><br><span class="line">lb.pack() </span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
+
+<p><strong>功能：选择按钮radiobutton</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line">window=tk.Tk()</span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)</span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)</span><br><span class="line"></span><br><span class="line">var=tk.StringVar()</span><br><span class="line">l=tk.Label(window,bg=<span class="string">&#x27;blue&#x27;</span>,width=<span class="number">20</span>,text=<span class="string">&#x27;empty&#x27;</span>)</span><br><span class="line">l.pack()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_selection</span>():</span><br><span class="line">    l.config(text=<span class="string">&#x27;you have selected &#x27;</span>+var.get())</span><br><span class="line">    </span><br><span class="line">r1=tk.Radiobutton(window,text=<span class="string">&#x27;Option A&#x27;</span>,</span><br><span class="line">                  var=var,value=<span class="string">&#x27;A&#x27;</span>,command=print_selection)</span><br><span class="line">r1.pack()</span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
+
+<p><strong>功能：刻度尺滑动选择条</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line">window=tk.Tk()</span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)</span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)</span><br><span class="line"></span><br><span class="line">l=tk.Label(window,bg=<span class="string">&#x27;blue&#x27;</span>,width=<span class="number">20</span>,text=<span class="string">&#x27;empty&#x27;</span>)</span><br><span class="line">l.pack()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_selection</span>(<span class="params">v</span>):</span><br><span class="line">    l.config(text=<span class="string">&#x27;you have selected &#x27;</span>+ v)</span><br><span class="line"></span><br><span class="line">s=tk.Scale(window,label=<span class="string">&#x27;try me&#x27;</span>,from_5,to=<span class="number">10</span>,orient=tk.HORIZONTAL,</span><br><span class="line">          length=<span class="number">200</span>,showvalue=<span class="number">0</span>,tickinterval=<span class="number">3</span>,</span><br><span class="line">          resolution=<span class="number">0.01</span>,command=print_selection)</span><br><span class="line">s.pack()</span><br><span class="line"></span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>取值范围from_5,to&#x3D;10,</li>
+<li>orient&#x3D;tk.HORIZANTAL,定义横向还是竖向</li>
+<li>length&#x3D;200,显示长度像素pixel，和label不一样，label是字符</li>
+<li>showvalue&#x3D;0,选值显示true1false0</li>
+<li>tickinterval&#x3D;3,标签单位标记，</li>
+<li>resolution&#x3D;0.01,保留两位小数</li>
+<li>command&#x3D;print_selection有默认传入值v</li>
+</ul>
+<p><strong>功能：刻度尺滑动选择条</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line">window=tk.Tk()</span><br><span class="line">window.title(<span class="string">&#x27;my window&#x27;</span>)</span><br><span class="line">window.geometry(<span class="string">&#x27;200x200&#x27;</span>)</span><br><span class="line"></span><br><span class="line">l=tk.Label(window,bg=<span class="string">&#x27;blue&#x27;</span>,width=<span class="number">20</span>,text=<span class="string">&#x27;empty&#x27;</span>)</span><br><span class="line">l.pack()</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">print_selection</span>():</span><br><span class="line">    <span class="keyword">if</span>(var1.get()==<span class="number">1</span>)&amp;(var2.get()==<span class="number">0</span>):</span><br><span class="line">        l.config(text=<span class="string">&#x27;I love only Python&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span>(var1.get()==<span class="number">0</span>)&amp;(var2.get()==<span class="number">1</span>):</span><br><span class="line">        l.config(text=<span class="string">&#x27;I love only C++&#x27;</span>)</span><br><span class="line">    <span class="keyword">elif</span>(var1.get()==<span class="number">0</span>)&amp;(var2.get()==<span class="number">0</span>):</span><br><span class="line">        l.config(text=<span class="string">&#x27;I love none of them&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        l.config(text=<span class="string">&#x27;I love both&#x27;</span>)</span><br><span class="line"></span><br><span class="line">var1=tk.IntVar()</span><br><span class="line">var2=tk.IntVar()</span><br><span class="line">c1=tk.Checkbutton(window,text=<span class="string">&#x27;Python&#x27;</span>,variable=var1,onvalue=<span class="number">1</span>,offvalue=<span class="number">0</span>,</span><br><span class="line">                  command=print_selection) </span><br><span class="line">c2=tk.Checkbutton(window,text=<span class="string">&#x27;C++&#x27;</span>,variable=var2,onvalue=<span class="number">1</span>,offvalue=<span class="number">0</span>,</span><br><span class="line">                  command=print_selection) </span><br><span class="line">c1.pack()</span><br><span class="line">c2.pack()</span><br><span class="line"></span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Source: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1jW411Y7dL/">Python GUI</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/CS/">CS</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+      
+        <div id="donation_div"></div>
+
+
+<script src="/js/vdonate.js"></script>
+
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: '/source/images/Wechat.JPG',
+  alipayImage: ''
+});
+</script>
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/06/05/%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          跳伞花费
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/29/%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BA%8C%E7%99%BE%E8%AE%A1%E5%88%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">第一个二百计划</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chap1-%E5%86%99%E4%B8%80%E4%B8%AA%E7%AA%97%E5%8F%A3"><span class="nav-number">1.</span> <span class="nav-text">Chap1. 写一个窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chap2-%E8%BE%93%E5%85%A5%E6%A1%86-entry%EF%BC%8C%E6%96%87%E6%9C%AC%E6%A1%86-text"><span class="nav-number">2.</span> <span class="nav-text">Chap2. 输入框 entry，文本框 text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chap3-%E5%88%97%E8%A1%A8"><span class="nav-number">3.</span> <span class="nav-text">Chap3. 列表</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2023 Saffron All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
