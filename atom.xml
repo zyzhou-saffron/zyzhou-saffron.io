@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Saffrex.</title>
   
-  
+  <subtitle>dum spiro,spero.</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-17T13:29:41.129Z</updated>
+  <updated>2023-06-18T22:18:51.303Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Packing Protocol</title>
-    <link href="http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9E%E8%AE%B0%E5%BD%95/"/>
-    <id>http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9E%E8%AE%B0%E5%BD%95/</id>
+    <title>Packing certificate Protocol</title>
+    <link href="http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9Eprotocol/"/>
+    <id>http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9Eprotocol/</id>
     <published>2023-06-17T12:52:01.791Z</published>
-    <updated>2023-06-17T13:29:41.129Z</updated>
+    <updated>2023-06-18T22:18:51.303Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Check-1"><a href="#Check-1" class="headerlink" title="Check 1"></a>Check 1</h3><ol><li>Confirm packing inspection.</li><li>Canopy flaked.</li><li>9 packing tabs per side.</li><li>Riser straight - NO TWIST.</li><li>Stabiliser line check.</li><li>Brake line check - NO TWIST.<blockquote><p>Sign for Check 1</p></blockquote></li></ol><h3 id="Check-2"><a href="#Check-2" class="headerlink" title="Check 2"></a>Check 2</h3><ol><li>Canopy folded correctly.</li><li>Stabiliser out.</li><li>No slack lines.</li><li>Slider correctly in place up against stops. Lift slider to check brake lines are on top of stabilisers.<blockquote><p>Sign for Check 2</p></blockquote></li></ol><h3 id="Check-3"><a href="#Check-3" class="headerlink" title="Check 3"></a>Check 3</h3><ol><li>Check the condition of the bag and the elastic bungees.</li><li>Check the condition of the static line, yellow cable pin and sliding snap hook. (open and close the hook)</li><li>Ensure lines emerge from the centre of the bag.<blockquote><p>Sign for Check 3</p></blockquote></li></ol><h3 id="Check-4"><a href="#Check-4" class="headerlink" title="Check 4"></a>Check 4</h3><ol><li>Lines correctly stow.</li><li>Lines clear of each other.</li><li>Stows are securely held by elastic bungees.<blockquote><p>Sign for Check 4</p></blockquote></li></ol><h3 id="Check-5"><a href="#Check-5" class="headerlink" title="Check 5"></a>Check 5</h3><ol><li>Bag in the container correctly with lines to the top of the main tray.</li><li>Risers correctly routed<blockquote><p>Sign for Check 5</p></blockquote></li></ol><h3 id="Check-6"><a href="#Check-6" class="headerlink" title="Check 6"></a>Check 6</h3><ol><li>Correct closing sequence bottom&#x2F;top&#x2F;left&#x2F;right.</li><li>Both cables through loop</li><li>Routing of static line.</li><li>S&#x2F;L stowed correctly.</li><li>Riser placed correctly.</li><li>Final harness check.</li><li>Ensure AAD is on.<blockquote><p>Sign for Check 6<br>Attach packing ticket to equipment</p></blockquote></li></ol>]]></content>
+    <content type="html"><![CDATA[<blockquote><p><strong>By the website: This protocol is only for individual reference use, not responsible for any potential risk if used without consulting.</strong></p></blockquote><h3 id="Check-1"><a href="#Check-1" class="headerlink" title="Check 1"></a>Check 1</h3><ol><li>Confirm packing inspection.</li><li>Canopy flaked.</li><li>9 packing tabs per side.</li><li>Riser straight - NO TWIST.</li><li>Stabiliser line check.</li><li>Brake line check - NO TWIST.<blockquote><p>Sign for Check 1</p></blockquote></li></ol><h3 id="Check-2"><a href="#Check-2" class="headerlink" title="Check 2"></a>Check 2</h3><ol><li>Canopy folded correctly.</li><li>Stabiliser out.</li><li>No slack lines.</li><li>Slider correctly in place up against stops. Lift slider to check brake lines are on top of stabilisers.<blockquote><p>Sign for Check 2</p></blockquote></li></ol><h3 id="Check-3"><a href="#Check-3" class="headerlink" title="Check 3"></a>Check 3</h3><ol><li>Check the condition of the bag and the elastic bungees.</li><li>Check the condition of the static line, yellow cable pin and sliding snap hook. (open and close the hook)</li><li>Ensure lines emerge from the centre of the bag.<blockquote><p>Sign for Check 3</p></blockquote></li></ol><h3 id="Check-4"><a href="#Check-4" class="headerlink" title="Check 4"></a>Check 4</h3><ol><li>Lines correctly stow.</li><li>Lines clear of each other.</li><li>Stows are securely held by elastic bungees.<blockquote><p>Sign for Check 4</p></blockquote></li></ol><h3 id="Check-5"><a href="#Check-5" class="headerlink" title="Check 5"></a>Check 5</h3><ol><li>Bag in the container correctly with lines to the top of the main tray.</li><li>Risers correctly routed<blockquote><p>Sign for Check 5</p></blockquote></li></ol><h3 id="Check-6"><a href="#Check-6" class="headerlink" title="Check 6"></a>Check 6</h3><ol><li>Correct closing sequence bottom&#x2F;top&#x2F;left&#x2F;right.</li><li>Both cables through loop</li><li>Routing of static line.</li><li>S&#x2F;L stowed correctly.</li><li>Riser placed correctly.</li><li>Final harness check.</li><li>Ensure AAD is on.<blockquote><p>Sign for Check 6<br>Attach packing ticket to equipment</p></blockquote></li></ol>]]></content>
     
     
-    <summary type="html">Packing protocol in Strathallan Airfield</summary>
+    <summary type="html">Packing protocol for Pathfinder28 Static-Line kit in Strathallan Airfield.For reference use only.</summary>
     
     
     
@@ -95,12 +95,12 @@
     <link href="http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/"/>
     <id>http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/</id>
     <published>2023-06-04T23:21:59.624Z</published>
-    <updated>2023-06-11T17:56:16.475Z</updated>
+    <updated>2023-06-18T22:20:36.966Z</updated>
     
-    <content type="html"><![CDATA[<table><thead><tr><th>Date</th><th>Catogray</th><th>Costing</th></tr></thead><tbody><tr><td>2023&#x2F;02&#x2F;04</td><td>Membership</td><td>149+61.04+50+630</td></tr><tr><td>2023&#x2F;02&#x2F;04</td><td>trains+taxi</td><td>11.84+15</td></tr><tr><td>2003&#x2F;02&#x2F;18</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;02&#x2F;25</td><td>bus+taxi</td><td>5+25</td></tr><tr><td>2023&#x2F;03&#x2F;4</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;11</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;25</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;29</td><td>bus</td><td>10</td></tr><tr><td>2023&#x2F;04&#x2F;01</td><td>train</td><td>11.35</td></tr><tr><td>2023&#x2F;06&#x2F;03</td><td>bus+taxi</td><td>25+5</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<table><thead><tr><th>Date</th><th>Catogray</th><th>Costing</th></tr></thead><tbody><tr><td>2023&#x2F;02&#x2F;04</td><td>Membership</td><td>149+61.04+50+630</td></tr><tr><td>2023&#x2F;02&#x2F;04</td><td>trains+taxi</td><td>11.84+15</td></tr><tr><td>2003&#x2F;02&#x2F;18</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;02&#x2F;25</td><td>bus+taxi</td><td>5+25</td></tr><tr><td>2023&#x2F;03&#x2F;4</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;11</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;25</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;29</td><td>bus</td><td>10</td></tr><tr><td>2023&#x2F;04&#x2F;01</td><td>train</td><td>11.35</td></tr><tr><td>2023&#x2F;06&#x2F;03</td><td>bus+taxi</td><td>25+5</td></tr><tr><td>2023&#x2F;06&#x2F;11</td><td>bus</td><td>5</td></tr></tbody></table>]]></content>
     
     
-    <summary type="html">这是一个我的跳伞考证花费记录</summary>
+    <summary type="html">这是一个我的跳伞考证全部花费记录</summary>
     
     
     
