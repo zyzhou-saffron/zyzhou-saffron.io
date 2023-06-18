@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Saffron</title>
+  <title>Saffrex.</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-11T17:19:20.984Z</updated>
+  <updated>2023-06-17T13:29:41.129Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Packing Protocol</title>
+    <link href="http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9E%E8%AE%B0%E5%BD%95/"/>
+    <id>http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9E%E8%AE%B0%E5%BD%95/</id>
+    <published>2023-06-17T12:52:01.791Z</published>
+    <updated>2023-06-17T13:29:41.129Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Check-1"><a href="#Check-1" class="headerlink" title="Check 1"></a>Check 1</h3><ol><li>Confirm packing inspection.</li><li>Canopy flaked.</li><li>9 packing tabs per side.</li><li>Riser straight - NO TWIST.</li><li>Stabiliser line check.</li><li>Brake line check - NO TWIST.<blockquote><p>Sign for Check 1</p></blockquote></li></ol><h3 id="Check-2"><a href="#Check-2" class="headerlink" title="Check 2"></a>Check 2</h3><ol><li>Canopy folded correctly.</li><li>Stabiliser out.</li><li>No slack lines.</li><li>Slider correctly in place up against stops. Lift slider to check brake lines are on top of stabilisers.<blockquote><p>Sign for Check 2</p></blockquote></li></ol><h3 id="Check-3"><a href="#Check-3" class="headerlink" title="Check 3"></a>Check 3</h3><ol><li>Check the condition of the bag and the elastic bungees.</li><li>Check the condition of the static line, yellow cable pin and sliding snap hook. (open and close the hook)</li><li>Ensure lines emerge from the centre of the bag.<blockquote><p>Sign for Check 3</p></blockquote></li></ol><h3 id="Check-4"><a href="#Check-4" class="headerlink" title="Check 4"></a>Check 4</h3><ol><li>Lines correctly stow.</li><li>Lines clear of each other.</li><li>Stows are securely held by elastic bungees.<blockquote><p>Sign for Check 4</p></blockquote></li></ol><h3 id="Check-5"><a href="#Check-5" class="headerlink" title="Check 5"></a>Check 5</h3><ol><li>Bag in the container correctly with lines to the top of the main tray.</li><li>Risers correctly routed<blockquote><p>Sign for Check 5</p></blockquote></li></ol><h3 id="Check-6"><a href="#Check-6" class="headerlink" title="Check 6"></a>Check 6</h3><ol><li>Correct closing sequence bottom&#x2F;top&#x2F;left&#x2F;right.</li><li>Both cables through loop</li><li>Routing of static line.</li><li>S&#x2F;L stowed correctly.</li><li>Riser placed correctly.</li><li>Final harness check.</li><li>Ensure AAD is on.<blockquote><p>Sign for Check 6<br>Attach packing ticket to equipment</p></blockquote></li></ol>]]></content>
+    
+    
+    <summary type="html">Packing protocol in Strathallan Airfield</summary>
+    
+    
+    
+    <category term="跳伞" scheme="http://example.com/categories/%E8%B7%B3%E4%BC%9E/"/>
+    
+    
+    <category term="叠伞" scheme="http://example.com/tags/%E5%8F%A0%E4%BC%9E/"/>
+    
+  </entry>
   
   <entry>
     <title>免疫学问题</title>
@@ -272,7 +293,7 @@
     <published>2023-04-26T19:48:13.827Z</published>
     <updated>2023-06-11T17:54:21.529Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.fatsecret.com/Default.aspx?pa=m">计算器</a></p><h2 id="代谢"><a href="#代谢" class="headerlink" title="代谢"></a>代谢</h2><ul><li>2023-04-26<br>  BMR&#x3D;1733<br>  2900x1.725&#x3D;2900<span id="more"></span></li></ul><h2 id="饮食参考"><a href="#饮食参考" class="headerlink" title="饮食参考"></a><a href="https://www.htltsupps.com/">饮食参考</a></h2><div class="row"><iframe src="https://drive.google.com/file/d/13tQt3rLsWVhn4WwO5CrH75gMjPD_mu8r/preview" style="width:100%; height:550px"></iframe></div>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.fatsecret.com/Default.aspx?pa=m">计算器</a></p><h2 id="代谢"><a href="#代谢" class="headerlink" title="代谢"></a>代谢</h2><ul><li>2023-04-26<br>  BMR&#x3D;1733<br>  2900x1.725&#x3D;2900<span id="more"></span></li></ul><h2 id="饮食参考"><a href="#饮食参考" class="headerlink" title="饮食参考"></a><a href="https://www.htltsupps.com/">饮食参考</a></h2><div class="pdfobject-container" data-target="https://drive.google.com/file/d/13tQt3rLsWVhn4WwO5CrH75gMjPD_mu8r/preview" data-height="500px"></div>]]></content>
     
     
     <summary type="html">饮食计划</summary>
