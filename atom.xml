@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-18T22:18:51.303Z</updated>
+  <updated>2023-06-25T10:02:49.284Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>跳伞日志</title>
+    <link href="http://example.com/2023/06/25/%E8%B7%B3%E4%BC%9E-%E6%97%A5%E5%BF%97/"/>
+    <id>http://example.com/2023/06/25/%E8%B7%B3%E4%BC%9E-%E6%97%A5%E5%BF%97/</id>
+    <published>2023-06-25T09:54:30.009Z</published>
+    <updated>2023-06-25T10:02:49.284Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="2023-06-25"><a href="#2023-06-25" class="headerlink" title="2023-06-25"></a>2023-06-25</h2><ul><li>Jp. 8.</li><li>10s delay</li></ul><h3 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h3><ul><li>出舱后，前五秒平衡但是随后失去平衡，随后两次恢复平衡但很快失去平衡。最后在12秒左右开伞。高度2500。</li><li>降落区过窄，最后阶段高度300以下下没有足够空间。差点撞高压线树和栅栏。</li></ul><h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><ul><li>出舱动作别向右转</li><li>保持 arch 直到平衡，开始五秒会不稳定，手臂伸直保持 arch 直到平衡</li></ul>]]></content>
+    
+    
+    <summary type="html">Debrief of skydiving jumps</summary>
+    
+    
+    
+    <category term="跳伞" scheme="http://example.com/categories/%E8%B7%B3%E4%BC%9E/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Packing certificate Protocol</title>
-    <link href="http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9Eprotocol/"/>
-    <id>http://example.com/2023/06/17/%E5%8F%A0%E4%BC%9Eprotocol/</id>
+    <link href="http://example.com/2023/06/17/%E8%B7%B3%E4%BC%9E-%E5%8F%A0%E4%BC%9Eprotocol/"/>
+    <id>http://example.com/2023/06/17/%E8%B7%B3%E4%BC%9E-%E5%8F%A0%E4%BC%9Eprotocol/</id>
     <published>2023-06-17T12:52:01.791Z</published>
     <updated>2023-06-18T22:18:51.303Z</updated>
     
@@ -75,10 +94,10 @@
   
   <entry>
     <title>记第一次单人跳伞</title>
-    <link href="http://example.com/2023/06/05/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%95%E4%BA%BA%E8%B7%B3%E4%BC%9E/"/>
-    <id>http://example.com/2023/06/05/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%95%E4%BA%BA%E8%B7%B3%E4%BC%9E/</id>
+    <link href="http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%95%E4%BA%BA%E8%B7%B3%E4%BC%9E/"/>
+    <id>http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E-%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%95%E4%BA%BA%E8%B7%B3%E4%BC%9E/</id>
     <published>2023-06-05T22:44:16.860Z</published>
-    <updated>2023-06-11T17:48:23.151Z</updated>
+    <updated>2023-06-25T10:02:40.559Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <script id="hbeData" type="hbeData" data-hmacdigest="9a033e33e36eeb348e11321e51c4533d5789280d9e36c625d2fdfb6cb7f2d422">bd64b498b26c197d23028eb969156eda13c504eda47de2accd8ce53905148e58d93da22e06b6a560c11579fe785b7bcd8e444737519d42fd9575cf5fcf7ee9c6cd996d63e40c7a4473b3b77d50073c18b39e8a0ea90ece42b01d4da571e9d8d88ce88bb89f1fefc060ff2d54e9d32f6b3a04a7284fae835afa971c04be10aa47e963f458defd7b8cb152803bb499b9a5a7d2dde584dd8a6ccca4b7ca0088beb8b6b9eba2ce13fe27bebb16d16f7d966bee43f6053c24c0e7336bafc82e542015470b6110eff611c4fd6ec1663de8bf60576d8f544be11a3595f629ceaf402e3b25f43a3584d9866a26feebf0fd7abecb30fa49eaf3deabfac49cd5e7d3144a275d12209e06ecdacbfee517673a9c55ce12494a1f87ec4500fc883d0dd9acdcd8ccd00d3c4823cc810896dbb16bd446b12eee41ac23efd24a295f5a2d663237cad0fd92edc4226190a585f50361443632a49babd48824b3528e4ec889d679adbdb822573854f00daa339bc51d7ca577832ebac719e22854f6e5b0e63430603ec4efee7a50886086a4b7621e3a8740e822b29dbcd4437dc01aae0acd9c1da3357d3508cbf739b0753519ddafc94c72c2cdcc0076bee3a3a300299fb3a12d5aa16d9fefcbf772bf09a6310e269f57a89d1bc52a32a1d0a573761365bf6a2eaa157a09f961daf8b70c21ce186c0c0d25495162f9b9466b28e7f79ed470c6859fc863b2d687044f681b8e50c87991b23c1efc5a630b7c76a27e8e482e7b62b957cdd5f5dc3dc348487698c7f52ad725419ed7300e7261a51d09ccf6b795c25af72f9ddc9771decc5f93fd49cbc63ccd3648bc8d78459b297b419104e9c6ad60f2af30a3bd871235bf3528efe11c160b055ea0be74d703e3979427a5060d050ac37305773ba951e7f9b299ceff2d313271e2bff61225f2a631918d277e14890461f04cdb2d5b84f7bd85c446030d3a5323e25207fab5a54999105ccbd56c4c6439a54e76fdeabaf9cc6516b73dc184cba390a1d2a1fb417003df8195ada070885e098d02da914d1a97314ea382c5e2ab9aab718abaa4276e758f9d30d9946ff045dfafc9b80b7490f4a4414cab0d99eb87587276221e93a595006f35f3834aa33fd8b6c43268f8071e2c8a1a10b681e20b3794efbe642e9b54ae88ca7fd1c6fdb78d88ccffe11f50b241e4353358ee3408c4e6407dd2d3413ca173f5a89c3441212820e262181b63280e147440977e47b084aa099e3214ca95d721fa341d2ad89baed6497207d3e61612312be0812269a96a62f384dff3bbbfe3744d1d961368bba1d234c97461df2117a311bed442efdbe2dfa6e26f96c139f4253c7015b7182f092ded4374da950294b504908e0fe92b9b7e0b69de5e8caff866cf268a394e07de952cbce0b04508b1df6ead7b09f2ab156fb7198ad92f81d941bc80aa86423eb043774b743aaecd57981e36603522eba39addbf4e1d6c914d39b80acf89e8375b3b6d24a94201223120318b0364d15b492ce3ec3ec76cc2d33da3c38866921b58494d8fbbdf7ae46f894fb359615cb242168420eb5a9b886df49d5fb2f6b3167fb95dda895409e1c6265cbf6f4c02cd15db7e42a00206e6093a72bf062024e63f067a03c95a6575a78f0b3e2edbf98f320a06b2c2ba14144db198cb67ffcdb6fccacd030c9875fd447fd0943dcbf6b56203261521c15135d5ac45537e9c471c6235637baf46b7c4ece2e897a26dc7ee087c</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hello there, a password is required here.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
@@ -87,15 +106,17 @@
     
     
     
+    <category term="跳伞" scheme="http://example.com/categories/%E8%B7%B3%E4%BC%9E/"/>
+    
     
   </entry>
   
   <entry>
     <title>跳伞花费</title>
-    <link href="http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/"/>
-    <id>http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/</id>
+    <link href="http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E-%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/"/>
+    <id>http://example.com/2023/06/05/%E8%B7%B3%E4%BC%9E-%E8%B7%B3%E4%BC%9E%E8%8A%B1%E8%B4%B9/</id>
     <published>2023-06-04T23:21:59.624Z</published>
-    <updated>2023-06-18T22:20:36.966Z</updated>
+    <updated>2023-06-25T10:02:55.078Z</updated>
     
     <content type="html"><![CDATA[<table><thead><tr><th>Date</th><th>Catogray</th><th>Costing</th></tr></thead><tbody><tr><td>2023&#x2F;02&#x2F;04</td><td>Membership</td><td>149+61.04+50+630</td></tr><tr><td>2023&#x2F;02&#x2F;04</td><td>trains+taxi</td><td>11.84+15</td></tr><tr><td>2003&#x2F;02&#x2F;18</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;02&#x2F;25</td><td>bus+taxi</td><td>5+25</td></tr><tr><td>2023&#x2F;03&#x2F;4</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;11</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;25</td><td>bus</td><td>5</td></tr><tr><td>2023&#x2F;03&#x2F;29</td><td>bus</td><td>10</td></tr><tr><td>2023&#x2F;04&#x2F;01</td><td>train</td><td>11.35</td></tr><tr><td>2023&#x2F;06&#x2F;03</td><td>bus+taxi</td><td>25+5</td></tr><tr><td>2023&#x2F;06&#x2F;11</td><td>bus</td><td>5</td></tr></tbody></table>]]></content>
     
@@ -106,8 +127,6 @@
     
     <category term="跳伞" scheme="http://example.com/categories/%E8%B7%B3%E4%BC%9E/"/>
     
-    
-    <category term="跳伞" scheme="http://example.com/tags/%E8%B7%B3%E4%BC%9E/"/>
     
   </entry>
   
@@ -394,29 +413,6 @@
     
     
     <category term="英语" scheme="http://example.com/tags/%E8%8B%B1%E8%AF%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>健身训练-训练计划</title>
-    <link href="http://example.com/2023/04/12/%E5%81%A5%E8%BA%AB%E8%AE%AD%E7%BB%83-%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/"/>
-    <id>http://example.com/2023/04/12/%E5%81%A5%E8%BA%AB%E8%AE%AD%E7%BB%83-%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/</id>
-    <published>2023-04-12T14:32:00.000Z</published>
-    <updated>2023-06-11T17:54:14.538Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="三分化"><a href="#三分化" class="headerlink" title="三分化"></a>三分化</h2><table><thead><tr><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></tr></thead><tbody><tr><td>legs&#x2F;shoulder</td><td>chest&#x2F;tricep</td><td>back&#x2F;bicep</td><td>legs&#x2F;shoulder</td><td>chest&#x2F;tricep</td><td>back&#x2F;bicep</td><td>rest</td></tr></tbody></table><span id="more"></span>]]></content>
-    
-    
-    <summary type="html">健身训练计划汇总</summary>
-    
-    
-    
-    <category term="锻炼" scheme="http://example.com/categories/%E9%94%BB%E7%82%BC/"/>
-    
-    
-    <category term="锻炼" scheme="http://example.com/tags/%E9%94%BB%E7%82%BC/"/>
-    
-    <category term="训练计划" scheme="http://example.com/tags/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/"/>
     
   </entry>
   
