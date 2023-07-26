@@ -809,6 +809,11 @@ pre .javascript .function {
 .post-body .note.danger h6 {
   color: #d9534f;
 }
+.pdfobject-container iframe,
+.pdfobject-container embed {
+  height: 500px;
+  width: 100%;
+}
 .pagination .prev,
 .pagination .next,
 .pagination .page-number,
@@ -1175,7 +1180,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #2aff00;
+  background: #ff8c73;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2574,22 +2579,15 @@ body {
   background-position: 50% 50%;
   background-size: 100%;
 }
-.main-inner > .sub-menu,
-.main-inner > .post-block,
-.main-inner > .tabs-comment,
-.main-inner > .comments,
-.main-inner > .pagination {
-  background: rgba(245,245,245,0.42);
-}
-body {
-  color: #000;
-}
-.posts-expand .post-title-link {
-  color: #000;
-}
-.posts-expand .post-meta-container {
-  color: #800;
+:root {
+  --content-bg-color: rgba(255,255,255,0.902);
 }
 .sidebar {
-  opacity: 0.85;
+  opacity: 0.8;
+}
+.post-block {
+  background: rgba(255,255,255,0.8) none repeat scroll !important;
+}
+.header-inner {
+  background: rgba(255,255,255,0.75);
 }
