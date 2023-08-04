@@ -12,14 +12,15 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://github.com/lxgw/LxgwWenKai//css?family=LXGW WenKai Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-center-circle.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="主要记录比较难查找的细节的更改和调整">
@@ -30,7 +31,7 @@
 <meta property="og:description" content="主要记录比较难查找的细节的更改和调整">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-07-26T23:32:14.623Z">
-<meta property="article:modified_time" content="2023-07-27T07:57:49.537Z">
+<meta property="article:modified_time" content="2023-07-29T14:32:57.819Z">
 <meta property="article:author" content="zyzhou">
 <meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
@@ -107,6 +108,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -141,11 +143,38 @@
     <a href="/webguide/" rel="section"><i class="fa fa-map-signs fa-fw"></i>网址导航</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -192,10 +221,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-07-27 00:32:14 / 修改时间：08:57:49" itemprop="dateCreated datePublished" datetime="2023-07-27T00:32:14+01:00">2023-07-27</time>
+              <time title="创建时间：2023-07-27 00:32:14" itemprop="dateCreated datePublished" datetime="2023-07-27T00:32:14+01:00">2023-07-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-07-29 15:32:57" itemprop="dateModified" datetime="2023-07-29T15:32:57+01:00">2023-07-29</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -225,16 +260,24 @@
 <p>主要记录比较难查找的细节的更改和调整</p>
 </blockquote>
 <span id="more"></span>
-<h3 id="1-文章结束语"><a href="#1-文章结束语" class="headerlink" title="1. 文章结束语"></a>1. 文章结束语</h3><ul>
+<h1 id="文章结束语"><a href="#文章结束语" class="headerlink" title="文章结束语"></a>文章结束语</h1><ul>
 <li><strong>添加模板文件</strong><br>在主题目录下<code>\layout\_macro</code>中新建 <code>passage-end-tag.swig</code>文件,并添加以下内容：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &#123;% if not is_index %&#125;</span><br><span class="line">        &lt;div style=&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;</span><br><span class="line">              -------------本文结束&lt;i class=&quot;fa fa-paw&quot;&gt;&lt;/i&gt;感谢您的阅读-------------</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
 <li><strong>导入模板文件</strong><br>在<code>\layout\_macro\post.swig</code>文件中，找到：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;#####################&#125;</span><br><span class="line">&#123;### END POST BODY ###&#125;</span><br><span class="line">&#123;#####################&#125;</span><br></pre></td></tr></table></figure>
 在上面代码之前添加：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">          &#123;% include &#x27;passage-end-tag.swig&#x27; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></li>
 <li><strong>配置</strong><br>在主题配置文件中添加：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 文章末尾添加“本文结束”标记</span><br><span class="line">passage_end_tag:</span><br><span class="line">  enabled: true</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h3 id="2-点击头像跳转到关于页面"><a href="#2-点击头像跳转到关于页面" class="headerlink" title="2 . 点击头像跳转到关于页面"></a>2 . 点击头像跳转到关于页面</h3><p>打开 themes\next\layout_partials\sidebar\site-overview. Swig 文件，将文件最开始的这一段改成以下：</p>
+<h1 id="点击头像跳转到关于页面"><a href="#点击头像跳转到关于页面" class="headerlink" title="点击头像跳转到关于页面"></a>点击头像跳转到关于页面</h1><p>打开 themes\next\layout_partials\sidebar\site-overview. Swig 文件，将文件最开始的这一段改成以下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;site-author motion-element&quot; itemprop=&quot;author&quot; itemscope itemtype=&quot;http://schema.org/Person&quot;&gt;</span><br><span class="line">  &#123;# 点击头像跳转 #&#125;</span><br><span class="line">  &lt;a href=&quot;/about&quot;&gt;</span><br><span class="line">  &lt;img class=&quot;site-author-image&quot; itemprop=&quot;image&quot; alt=&quot; &#123;&#123; author &#125;&#125; &quot;</span><br><span class="line">    src=&quot; &#123;&#123; url_for(theme.avatar.url or theme.images + &#x27;/avatar.gif&#x27;) &#125;&#125; &quot;&gt;</span><br><span class="line">  &lt;/a&gt;</span><br><span class="line">  &lt;p class=&quot;site-author-name&quot; itemprop=&quot;name&quot;&gt; &#123;&#123; author &#125;&#125; &lt;/p&gt;</span><br><span class="line">  &lt;div class=&quot;site-description&quot; itemprop=&quot;description&quot;&gt; &#123;&#123; description &#125;&#125; &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>其中负责跳转的是以下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#123;# 点击头像跳转 #&#125;</span><br><span class="line">&lt;a href=&quot;/about&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="文章段落折叠"><a href="#文章段落折叠" class="headerlink" title="文章段落折叠"></a>文章段落折叠</h1><p>对段落或者代码很长的内容，可能有折叠需求，Markdown语言支持自动折叠的功能。</p>
+<details>  
+   <summary>段落/代码折叠示例</summary>  
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;details&gt;  </span><br><span class="line">   &lt;summary&gt;Title&lt;/summary&gt;  </span><br><span class="line">  </span><br><span class="line">    Content!!! 注意 summary 与该内容之间要空一行，部分编辑器可能不支持此功能。  </span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
+</details>
+
 
 
     <div> 
@@ -343,7 +386,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%87%E7%AB%A0%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">1. 文章结束语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%82%B9%E5%87%BB%E5%A4%B4%E5%83%8F%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">2 . 点击头像跳转到关于页面</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">文章结束语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%82%B9%E5%87%BB%E5%A4%B4%E5%83%8F%E8%B7%B3%E8%BD%AC%E5%88%B0%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2"><span class="nav-number">2.</span> <span class="nav-text">点击头像跳转到关于页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E7%AB%A0%E6%AE%B5%E8%90%BD%E6%8A%98%E5%8F%A0"><span class="nav-number">3.</span> <span class="nav-text">文章段落折叠</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -379,6 +422,11 @@
       </div>
   </nav>
 </div>
+  <div class="sidebar-button motion-element">
+    <a onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="https://github.com/zyzhou-saffron" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zyzhou-saffron" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -398,7 +446,7 @@
 <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
 <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title"></h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
             <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IBD/" rel="tag">IBD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tkinter/" rel="tag">Tkinter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%A0%E4%BC%9E/" rel="tag">叠伞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%8C%E9%A5%AD/" rel="tag">拌饭</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%95%E8%AF%AD/" rel="tag">法语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/" rel="tag">训练计划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%BB%E7%82%BC/" rel="tag">锻炼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A3%9F%E8%B0%B1/" rel="tag">食谱</a><span class="tag-list-count">1</span></li></ul>
@@ -446,6 +494,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -468,8 +518,24 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
 
 
+
+
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = 'yCBNuHPcizu5YwJzr';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
 
 
 

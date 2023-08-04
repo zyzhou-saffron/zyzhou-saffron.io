@@ -12,14 +12,15 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://github.com/lxgw/LxgwWenKai//css?family=LXGW WenKai Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-center-circle.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="生命的精彩在于挑战本能">
@@ -31,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/swoop.gif">
 <meta property="article:published_time" content="2023-06-04T23:21:59.624Z">
-<meta property="article:modified_time" content="2023-07-27T00:13:13.895Z">
+<meta property="article:modified_time" content="2023-07-31T23:45:43.129Z">
 <meta property="article:author" content="zyzhou">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/swoop.gif">
@@ -108,6 +109,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -142,11 +144,38 @@
     <a href="/webguide/" rel="section"><i class="fa fa-map-signs fa-fw"></i>网址导航</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -201,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-27 01:13:13" itemprop="dateModified" datetime="2023-07-27T01:13:13+01:00">2023-07-27</time>
+                <time title="修改时间：2023-08-01 00:45:43" itemprop="dateModified" datetime="2023-08-01T00:45:43+01:00">2023-08-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,7 +257,14 @@
 <center>生命的精彩在于挑战本能</center>
 <span id="more"></span>
 
-<h1 id="A-licence-costing"><a href="#A-licence-costing" class="headerlink" title="A-licence costing"></a>A-licence costing</h1><table>
+<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>“白马已经老了，只能慢慢的走，但终是能回到中原的。江南有杨柳、桃花，有燕子、金鱼……汉人中有的是英俊勇武的少年，倜傥潇洒的少年…… 但这个美丽的姑娘就像古高昌国人那样固执：“那都是很好很好的，可是我偏不喜欢。”</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<h1 id="Costing"><a href="#Costing" class="headerlink" title="Costing"></a>Costing</h1><h2 id="A-license"><a href="#A-license" class="headerlink" title="A-license"></a>A-license</h2><table>
 <thead>
 <tr>
 <th>Date</th>
@@ -291,8 +327,18 @@
 <td>bus</td>
 <td>5</td>
 </tr>
+<tr>
+<td>2023&#x2F;07&#x2F;29</td>
+<td>bus</td>
+<td>5.5</td>
+</tr>
 </tbody></table>
-<h2 id="Debrief"><a href="#Debrief" class="headerlink" title="Debrief"></a>Debrief</h2><h3 id="2023-06-25"><a href="#2023-06-25" class="headerlink" title="2023 -06-25"></a>2023 -06-25</h3><ul>
+<h1 id="Estimated-cost-to-B-license"><a href="#Estimated-cost-to-B-license" class="headerlink" title="Estimated cost to B-license"></a>Estimated cost to B-license</h1><ul>
+<li>20-50 jumps</li>
+<li>最少：(35 x 30) x 10&#x3D;10500</li>
+<li>国内：600x 30&#x3D;18000</li>
+</ul>
+<h1 id="Debrief"><a href="#Debrief" class="headerlink" title="Debrief"></a>Debrief</h1><h2 id="2023-06-25"><a href="#2023-06-25" class="headerlink" title="2023 -06-25"></a>2023 -06-25</h2><ul>
 <li>Jp. 8.</li>
 <li>10 s delay</li>
 </ul>
@@ -305,7 +351,7 @@
 <li>保持 arch 直到平衡，开始五秒会不稳定，手臂伸直保持 arch 直到平衡</li>
 <li><strong>寻找 open space</strong></li>
 </ul>
-<h3 id="2023-07-22"><a href="#2023-07-22" class="headerlink" title="2023 -07-22"></a>2023 -07-22</h3><ul>
+<h2 id="2023-07-22"><a href="#2023-07-22" class="headerlink" title="2023 -07-22"></a>2023 -07-22</h2><ul>
 <li>Jp. 9</li>
 <li>15 s delay</li>
 </ul>
@@ -315,6 +361,19 @@
 <h3 id="改进-1"><a href="#改进-1" class="headerlink" title="改进"></a>改进</h3><ul>
 <li>腿部平衡</li>
 </ul>
+<h2 id="2023-07-30"><a href="#2023-07-30" class="headerlink" title="2023 -07-30"></a>2023 -07-30</h2><ul>
+<li>Jp. 10</li>
+<li>10 s delay</li>
+</ul>
+<h3 id="状态-2"><a href="#状态-2" class="headerlink" title="状态"></a>状态</h3><ul>
+<li>Freefall 阶段完美10-12秒 delay，完全稳定没有旋转。</li>
+<li>开伞后由于地面标志物类似机场建筑，所以以为在机场上方，直到2500ft 左右反复确认了三四次，因为没有跑道，才反应过来不在机场上空，期间做了2-3圈 full turn，掉到了2000ft 左右的高度。用 flat-turn 找了大概4分钟都没有找到 dropzone 在哪里，已经做好了降落在田里的准备。最终在很远的方向上找到了 dropzone 的跑道。此时高度不太理想了，用 half-drive 朝机场飞去，同时也是 extended range 训练。从机场的西边一直飞到的东边，大脑没有反应过来，所以不敢转弯，其实此时高度完全可以，飞到机场中央时候处于大概500ft 左右。最终落在了机场东边的一片麦田里，压到了3m 左右的麦子。</li>
+<li>准备开始像 Sam 一样记录每次在 Strathallan 发生的点点滴滴，以后再看将是一份完美的回忆。</li>
+</ul>
+<h3 id="改进-2"><a href="#改进-2" class="headerlink" title="改进"></a>改进</h3><ul>
+<li>暂时没有，只是 fun jump</li>
+</ul>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p>[1]. <a target="_blank" rel="noopener" href="https://britishskydiving.org/training-progression/further-progression/">飞行进步树</a></p>
 
     <div> 
           
@@ -419,7 +478,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-licence-costing"><span class="nav-number">1.</span> <span class="nav-text">A-licence costing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Debrief"><span class="nav-number">1.1.</span> <span class="nav-text">Debrief</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2023-06-25"><span class="nav-number">1.1.1.</span> <span class="nav-text">2023 -06-25</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81"><span class="nav-number">1.1.2.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">1.1.3.</span> <span class="nav-text">改进</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2023-07-22"><span class="nav-number">1.1.4.</span> <span class="nav-text">2023 -07-22</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-1"><span class="nav-number">1.1.5.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B-1"><span class="nav-number">1.1.6.</span> <span class="nav-text">改进</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Costing"><span class="nav-number">1.</span> <span class="nav-text">Costing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-license"><span class="nav-number">1.1.</span> <span class="nav-text">A-license</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Estimated-cost-to-B-license"><span class="nav-number">2.</span> <span class="nav-text">Estimated cost to B-license</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Debrief"><span class="nav-number">3.</span> <span class="nav-text">Debrief</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-06-25"><span class="nav-number">3.1.</span> <span class="nav-text">2023 -06-25</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81"><span class="nav-number">3.1.1.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B"><span class="nav-number">3.1.2.</span> <span class="nav-text">改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-07-22"><span class="nav-number">3.2.</span> <span class="nav-text">2023 -07-22</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-1"><span class="nav-number">3.2.1.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B-1"><span class="nav-number">3.2.2.</span> <span class="nav-text">改进</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2023-07-30"><span class="nav-number">3.3.</span> <span class="nav-text">2023 -07-30</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8A%B6%E6%80%81-2"><span class="nav-number">3.3.1.</span> <span class="nav-text">状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%94%B9%E8%BF%9B-2"><span class="nav-number">3.3.2.</span> <span class="nav-text">改进</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -455,6 +514,11 @@
       </div>
   </nav>
 </div>
+  <div class="sidebar-button motion-element">
+    <a onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="https://github.com/zyzhou-saffron" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zyzhou-saffron" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -474,7 +538,7 @@
 <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
 <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title"></h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
             <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IBD/" rel="tag">IBD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tkinter/" rel="tag">Tkinter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%A0%E4%BC%9E/" rel="tag">叠伞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%8C%E9%A5%AD/" rel="tag">拌饭</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%95%E8%AF%AD/" rel="tag">法语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/" rel="tag">训练计划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%BB%E7%82%BC/" rel="tag">锻炼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A3%9F%E8%B0%B1/" rel="tag">食谱</a><span class="tag-list-count">1</span></li></ul>
@@ -522,6 +586,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -544,8 +610,24 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
 
 
+
+
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = 'yCBNuHPcizu5YwJzr';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
 
 
 

@@ -12,14 +12,15 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://github.com/lxgw/LxgwWenKai//css?family=LXGW WenKai Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="/lib/pace/pace-theme-center-circle.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="article">
@@ -29,7 +30,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0.gif">
 <meta property="article:published_time" content="2023-06-08T08:27:12.660Z">
-<meta property="article:modified_time" content="2023-07-26T19:43:39.307Z">
+<meta property="article:modified_time" content="2023-08-03T23:31:31.661Z">
 <meta property="article:author" content="zyzhou">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0.gif">
@@ -106,6 +107,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -140,11 +142,38 @@
     <a href="/webguide/" rel="section"><i class="fa fa-map-signs fa-fw"></i>网址导航</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -199,7 +228,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-07-26 20:43:39" itemprop="dateModified" datetime="2023-07-26T20:43:39+01:00">2023-07-26</time>
+                <time title="修改时间：2023-08-04 00:31:31" itemprop="dateModified" datetime="2023-08-04T00:31:31+01:00">2023-08-04</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,6 +281,21 @@
 </ul>
 </li>
 </ol>
+<h1 id="S100A8的功能"><a href="#S100A8的功能" class="headerlink" title="S100A8的功能"></a>S100A8的功能</h1><ul>
+<li>S100A8和 S100A9可以形成同源二聚体、异源二聚体和异源四聚体。（S100A8 and S100A9 can form homo- and heterodimers as well as heterotetramers.）</li>
+<li>“Mrp14-&#x2F;-“小鼠：基因组中的 Mrp14基因已被”敲除”。这个基因编码的是 S100A9蛋白，也被称为 myeloid-related protein 14 (MRP14)，这是一个在髓系细胞（如中性粒细胞和单核细胞）中表达的钙结合蛋白。<details>  
+ <summary>髓系细胞（Myeloid cells）</summary></details></li>
+</ul>
+<p>髓系细胞（Myeloid cells）是一种源于骨髓的血细胞，包括多种成熟的免疫细胞和血小板的前体。以下是一些主要的髓系细胞：</p>
+<ol>
+<li>中性粒细胞（Neutrophils）：这是人体内最丰富的白细胞类型，它们的主要功能是消灭细菌和真菌。</li>
+<li>单核细胞（Monocytes）：它们在血液中循环，可以迁移到组织中并成熟为巨噬细胞或树突状细胞。</li>
+<li>巨噬细胞（Macrophages）：它们是免疫应答的重要部分，能吞噬并消灭病原体，并促进炎症反应。</li>
+<li>树突状细胞（Dendritic cells）：它们主要存在于组织中，如皮肤和内脏，能捕获并处理抗原，然后呈递给 T 细胞，从而启动适应性免疫应答。</li>
+<li>嗜酸性粒细胞（Eosinophils）和嗜碱性粒细胞（Basophils）：这些细胞参与对寄生虫的防御和过敏反应。</li>
+<li>血小板（Platelets）：它们的前体——巨核细胞（Megakaryocytes）也源自骨髓，血小板在止血和血液凝固中起关键作用。  </li>
+</ol>
+<p><a target="_blank" rel="noopener" href="https://lete114.github.io/CardLink">https://Lete114.github.io/CardLink</a></p>
 
     <div> 
           
@@ -356,7 +400,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E5%9E%8B%E5%85%8D%E7%96%AB%EF%BC%8C%E4%BA%8C%E5%9E%8B%EF%BC%8C%E4%B8%89%E5%9E%8B%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">一型免疫，二型，三型分别是什么，有什么区别</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E5%9E%8B%E5%85%8D%E7%96%AB%EF%BC%8C%E4%BA%8C%E5%9E%8B%EF%BC%8C%E4%B8%89%E5%9E%8B%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">一型免疫，二型，三型分别是什么，有什么区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#S100A8%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">2.</span> <span class="nav-text">S100A8的功能</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -392,6 +436,11 @@
       </div>
   </nav>
 </div>
+  <div class="sidebar-button motion-element">
+    <a onclick="Chatra('openChat', true);"><i class="fa fa-comment"></i>
+    Chat
+  </a>
+  </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
         <a href="https://github.com/zyzhou-saffron" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zyzhou-saffron" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -411,7 +460,7 @@
 <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
 <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
 <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
+    <h3 class="widget-title"></h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width=100%">
             <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/IBD/" rel="tag">IBD</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tkinter/" rel="tag">Tkinter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%A0%E4%BC%9E/" rel="tag">叠伞</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8B%8C%E9%A5%AD/" rel="tag">拌饭</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A5%E8%AF%AD/" rel="tag">日语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B3%95%E8%AF%AD/" rel="tag">法语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%8B%B1%E8%AF%AD/" rel="tag">英语</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%AD%E7%BB%83%E8%AE%A1%E5%88%92/" rel="tag">训练计划</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%BB%E7%82%BC/" rel="tag">锻炼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A3%9F%E8%B0%B1/" rel="tag">食谱</a><span class="tag-list-count">1</span></li></ul>
@@ -459,6 +508,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -481,8 +532,24 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
 
 
+
+
+  <script>
+    (function(d, w, c) {
+      w.ChatraID = 'yCBNuHPcizu5YwJzr';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+        (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://call.chatra.io/chatra.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+  </script>
 
 
 
