@@ -88,6 +88,12 @@
 <li>最少：(35 x 30) x 10&#x3D;10500</li>
 <li>国内：600x 30&#x3D;18000</li>
 </ul>
+<div class="note no-icon info">
+            <p>4）装备租赁价格<br>伞服：50元&#x2F;次<br>头盔：60元&#x2F;次<br>高度表：60元&#x2F;次<br>单人伞包：200元&#x2F;次</p>
+          </div>
+
+
+
 <h1 id="Debrief"><a href="#Debrief" class="headerlink" title="Debrief"></a>Debrief</h1><h2 id="2023-06-25"><a href="#2023-06-25" class="headerlink" title="2023 -06-25"></a>2023 -06-25</h2><ul>
 <li>Jp. 8.</li>
 <li>10 s delay</li>
@@ -130,6 +136,11 @@
       </categories>
   </entry>
   <entry>
+    <title></title>
+    <url>/2023/08/15/%E4%BA%94%E5%B9%B4%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>从零开始学前端</title>
     <url>/2023/08/04/Notes-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AD%A6%E5%89%8D%E7%AB%AF/</url>
     <content><![CDATA[<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><ol>
@@ -137,6 +148,7 @@
 </ol>
 ]]></content>
       <categories>
+        <category>学习</category>
         <category>CS</category>
         <category>前端</category>
       </categories>
@@ -150,19 +162,21 @@
     <url>/2023/07/27/Notes-%E5%AD%9F%E5%BE%B7%E5%B0%94%E9%9A%8F%E6%9C%BA%E5%8C%96/</url>
     <content><![CDATA[<p><img src="/../images/mendelian_randomization.png"></p>
 <center>U-混杂因素; Z-工具变量; X-暴露因素; Y-结局变量</center>
-本文是利用两样本孟德尔随机化方法探究血液中的代谢物（blood metabolites）与冠心病（coronary artery disease (CAD) ）发病风险之间的因果关系。
+
 
 <span id="more"></span>
-
+<h1 id="孟德尔随机化诞生的背景"><a href="#孟德尔随机化诞生的背景" class="headerlink" title="孟德尔随机化诞生的背景"></a>孟德尔随机化诞生的背景</h1><p>在传统的观察实验中，研究者通常只能观察被动的现象，而不能主动干预实验，从而会受到许多干扰因素的影响，带来不确定性，让得出的结论不可信。</p>
+<p>而孟德尔随机化这种研究利用遗传的随机分配，将样本个体随机分为不同组，确保了研究样本在遗传特征上是随机的，避免了这种不可信。</p>
+<p>假如威廉爵士研究金坷垃是否影响了植物的生长。上次实验中他在试验田里观察到了他的植物的氮磷钾吸收都增加了但是氮吸收只增长了一点点。所以这次他想观察植物的氮吸收是否真的受到了金坷垃的影响。如果他继续在田里观察他的植物，那么将受到许多因素的影响，降水，日照<br><img src="/../images/mendelian_randomization.png"></p>
+<p>本文是利用两样本孟德尔随机化方法探究血液中的代谢物（blood metabolites）与冠心病（coronary artery disease (CAD) ）发病风险之间的因果关系。</p>
 <blockquote>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/</a></p>
 </blockquote>
+<p>血液中的代谢物可以反应个体的遗传组成并能预测或影响疾病的发生发展。</p>
+<p>孟德尔随机化（MR）作为一种流行的遗传流行病学研究设计方法，它通过使用遗传变异作为工具变量，可以探究暴露和结局之间的因果关系。</p>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><h3 id="样本-："><a href="#样本-：" class="headerlink" title="样本 ："></a>样本 ：</h3><p>公共数据库中的大规模的<strong>代谢组-全基因组关联分析数据</strong>和<strong>冠心病全基因组关联分析数据</strong></p>
-<ol>
-<li>metabolome-based genome-wide association study (mGWAS)</li>
-<li>GWAS of CAD<br>我们对486种代谢物的遗传变异采用了统一的入选标准。选择 MR 分析中常用的较为宽松的阈值，即<em>P</em>&lt; 1×10-5为显著的关联分析结果入选条件；在提取出每个代谢物对应的显著的SNP后，以千人基因组中欧洲人（EUR）基因型为参考模板，进行连锁不平衡分析，同时满足以下三个条件认为连锁不平衡并保留_P_值最小的SNP作为独立的遗传变异：（1）位于同个染色体；（2）相互距离在500 kb以内；（3）连锁不平衡参数*r*2&gt;0.1。</li>
-</ol>
-<p>因为处于同个代谢通路的代谢物可能会受到相似的遗传变异调控，即可能存在多个代谢物与同一个SNP显著相关，这将违反MR假设标准。因此，本研究采用限制性选取工具变量的方法[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b17">17</a>]，排除与两个以上代谢物均显著相关的SNP。同时排除已知的冠心病风险因素相关的SNP（包括身体质量指数[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b18">18</a>]、身高[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b10">10</a>]、腰围[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b11">11</a>]、臀围[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b12">12</a>]、腰臀比[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b19">19</a>]、血脂[<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7905253/#b20">20</a>]相关的SNP）。</p>
+<p>我们对486种代谢物的遗传变异采用了统一的入选标准。选择 MR 分析中常用的较为宽松的阈值，即<em>P</em>&lt; 1×10-5为显著的关联分析结果入选条件；在提取出每个代谢物对应的显著的SNP后，以千人基因组中欧洲人（EUR）基因型为参考模板，进行连锁不平衡分析，同时满足以下三个条件认为连锁不平衡并保留_P_值最小的SNP作为独立的遗传变异：（1）位于同个染色体；（2）相互距离在500 kb以内；（3）连锁不平衡参数*r*2&gt;0.1。</p>
+<p>因为处于同个代谢通路的代谢物可能会受到相似的遗传变异调控，即可能存在多个代谢物与同一个SNP显著相关，这将违反MR假设标准。因此，本研究采用限制性选取工具变量的方法，排除与两个以上代谢物均显著相关的SNP。同时排除已知的冠心病风险因素相关的SNP（包括身体质量指数、身高、腰围、臀围、腰臀比、血脂相关的SNP）。</p>
 <h3 id="方法-："><a href="#方法-：" class="headerlink" title="方法 ："></a>方法 ：</h3><p>通过<strong>逆方差加权法</strong>和其他4种两样本孟德尔随机化模型来评估血液代谢物与冠心病之间的因果关系。使用异质性检验、基因多效性检验和敏感性分析来评估结果的稳定性和可靠性。</p>
 <ol>
 <li>inverse variance weighted (IVW) method, etc</li>
@@ -176,7 +190,10 @@
 <li>nominally causative association</li>
 <li>N-乙酰鸟氨酸 N-acetylornithine, （Des-Arg9）-缓激肽 bradykinin-des-arg (9), and 丁二酰基肉碱succinylcarnitine<br><a href="http://metabolomics.helmholtz-muenchen.de/gwas/" target="_blank">http://metabolomics. helmholtz-muenchen. de/gwas/</a>.</li>
 </ol>
-<p> Cvcvcv</p>
+<h1 id="专有名词"><a href="#专有名词" class="headerlink" title="专有名词"></a>专有名词</h1><ol>
+<li>Metabolome-based genome-wide association study (mGWAS)</li>
+<li>GWAS of CAD</li>
+</ol>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -185,7 +202,7 @@
   </entry>
   <entry>
     <title>Next主题美化记录</title>
-    <url>/2023/07/27/Next%E7%BE%8E%E5%8C%96/</url>
+    <url>/2023/07/27/Noyes-Next%E7%BE%8E%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
 <p>主要记录比较难查找的细节的更改和调整</p>
 </blockquote>
@@ -208,9 +225,76 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;details&gt;  </span><br><span class="line">   &lt;summary&gt;Title&lt;/summary&gt;  </span><br><span class="line">  </span><br><span class="line">    Content!!! 注意 summary 与该内容之间要空一行，部分编辑器可能不支持此功能。  </span><br><span class="line">&lt;/details&gt;</span><br></pre></td></tr></table></figure>
 </details>
 
+<h1 id="标签插件🏷"><a href="#标签插件🏷" class="headerlink" title="标签插件🏷"></a>标签插件🏷</h1><h2 id="note-和-tab-的用法"><a href="#note-和-tab-的用法" class="headerlink" title="note 和 tab 的用法"></a>note 和 tab 的用法</h2><p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [summary] %&#125;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">class 是note的级别，可以是info, warning, danger, success, default</span><br><span class="line">no-icon 是是否显示图标，如果不写，就显示图标，如果写了，就不显示图标</span><br><span class="line">summary 是note的标题</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<div class="note info">
+            <p>这是 info 界面</p>
+          </div>
+
+<div class="note warning">
+            <p>这是 warning 界面</p>
+          </div>
+
+<div class="note danger">
+            <p>这是 danger 界面</p>
+          </div>
+
+<div class="note success">
+            <p>这是 success 界面</p>
+          </div>
+
+<div class="note default">
+            <p>这是 default 界面</p>
+          </div>
+<h2 id="链接卡片-linkgrid"><a href="#链接卡片-linkgrid" class="headerlink" title="链接卡片 - linkgrid"></a>链接卡片 - linkgrid</h2><p>用法：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% linkgrid [image] [delimiter] [comment] %&#125;</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% lg [image] [delimiter] [comment] %&#125;</span><br><span class="line">&#123;% endlg %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>[image]</code>: <em>Optional parameter.</em> Default image URL.</li>
+<li><code>[delimiter]</code>: <em>Optional parameter.</em> If the optional delimiter parameter is given, it is interpreted as the delimiter of items in each line.</li>
+<li><code>[comment]</code>: <em>Optional parameter.</em> If the optional comment parameter is given, it is interpreted as the symbol to comment out a line.</li>
+</ul>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% linkgrid %&#125;</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">% Theme NexT | https://theme-next.js.org/ | Stay Simple. Stay NexT. | /images/apple-touch-icon-next.png</span><br><span class="line">&#123;% endlinkgrid %&#125;</span><br></pre></td></tr></table></figure>
+
+<a href title target>..&#x2F;images&#x2F;dairy. Jpg</a>
+<p>小元宵 | <a href="https://theme-next.js.org/">https://theme-next.js.org/</a> | 6 个月的时候的照片 | ..&#x2F;images&#x2F;dairy. Jpg</p>
+<a href title target></a>
+
+<h1 id="按钮-Button"><a href="#按钮-Button" class="headerlink" title="按钮 - Button"></a>按钮 - Button</h1><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% button url, text, icon [class], [title] %&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>url</code> : 绝对或相对 URL</li>
+<li><code>text</code> : 按钮文字，如果未指定图标则为必须</li>
+<li><code>icon</code> : FontAwesome 图标名称（开头没有’fa-‘）。如果未指定文本，则为必需</li>
+<li><code>[class]</code> : FontAwesome 类：<code>fa-fw | fa-lg | fa-2x | fa-3x | fa-4x | fa-5X</code>，可选参数。</li>
+<li><code>[title]</code> : 鼠标悬停时的工具提示，可选参数。</li>
+</ul>
+<p>注意：最好添加 <code>&lt;div&gt;</code> 标签，测试时没加 div，下面显示不完全，加上非常美观。</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h3 id="单个按钮显示"><a href="#单个按钮显示" class="headerlink" title="单个按钮显示"></a>单个按钮显示</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;&#123;% button https://tding.top/ ,首页,home fa-fw,这是小丁的个人博客首页%&#125;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="显示效果："><a href="#显示效果：" class="headerlink" title="显示效果："></a>显示效果：</h4><div><a class="btn" href="https://tding.top/ " title="这是小丁的个人博客首页">
+            <i class="fa fa-home fa-fw"></i>首页
+          </a></div>
+
+<h3 id="多个按钮居中显示："><a href="#多个按钮居中显示：" class="headerlink" title="多个按钮居中显示："></a>多个按钮居中显示：</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;text-center&quot;&gt;&lt;div&gt;&#123;% button https://tding.top/ ,首页,home fa-fw,这是小丁的个人博客首页%&#125; &#123;% button https://tding.top/movies/ ,观影,film fa-fw,豆瓣电影%&#125; &#123;% button https://tding.top/books/ ,阅读,book fa-fw,豆瓣读书%&#125;&lt;/div&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="显示效果：-1"><a href="#显示效果：-1" class="headerlink" title="显示效果："></a>显示效果：</h4><div class="text-center"><div><a class="btn" href="https://tding.top/ " title="这是小丁的个人博客首页">
+            <i class="fa fa-home fa-fw"></i>首页
+          </a> <a class="btn" href="https://tding.top/movies/ " title="豆瓣电影">
+            <i class="fa fa-film fa-fw"></i>观影
+          </a> <a class="btn" href="https://tding.top/books/ " title="豆瓣读书">
+            <i class="fa fa-book fa-fw"></i>阅读
+          </a></div></div>
+
+<h1 id="实现博客订阅"><a href="#实现博客订阅" class="headerlink" title="实现博客订阅"></a>实现博客订阅</h1><h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ol>
+<li><a href="https://theme-next.js.org/docs/tag-plugins/">标签插件官方文档</a></li>
+<li><a href="http://ynotes.cc/2023/02/16/hexo-next-%E5%B8%B8%E7%94%A8tag/">hexo next tag note tabs 使用笔记</a></li>
+<li><a href="https://www.liaofuzhan.com/posts/4068965437.html">Mailchimp 实现订阅功能</a></li>
+</ol>
 ]]></content>
       <categories>
+        <category>学习</category>
         <category>CS</category>
         <category>前端</category>
       </categories>
@@ -221,18 +305,411 @@
   <entry>
     <title>日记</title>
     <url>/2023/07/18/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="02a1029fab19af9a60b756d59ab501c99a56dcae8ce8f9c6378418cc1a3b7486">bd64b498b26c197d23028eb969156edad4ec4ae988e7b25593598b77edd1b657605d429aff374888e4f5deef3340b2c089f1408a46ff3e7b4f48428526bcd1d7cecbdb9f77613236811385e4106518135ce07f6a6d20a27eee547b772caca5d3476ebe48879c6d0024667a8d8d1ce689ce83fb2b483779b8cb4fcb17d5f32725815a259ff4dd78c11b3e53f2a28d486367354a1614a2ff6bbc75f4c00661c3f95b8e1dedf27ce8670cbbf2658d2c09cfd0794a66f8cdaba63890b21745ed884b6b5eb381c6a4a40b6f17d0b5d9aa082ea5f37ad186668478f523ae2e27f2a5db7b74630aae71998a554919941ff47d2849b9d8a495294340fe3128401d0be55ada21f6c1bd21a81e811e8da0340f4d44f05b68bfb86a0e27d5c676388276b454e2aeee417250c90d6bbe106e37a4ec11ac7e765a2c341a576f4eee2b57caceb031942358abfefed67832320816309f346bf08f6cbba31e9ada24874c75b27a463b8d4d795502b195df2967b7cbe742afbb6ecae454f0b06f4a53c5a928851c67e69f3976b297a1849f4f5278b27318b4356dd3b6a93707b2de78d2c07213d20f63c731618331c7e4da682d5e739619f66e43d8a24c4ca31056f72a45145867cb25b0dd07f47c959dc103e055791907a2e0d23ab9e608152b07007030b776c00a5cd838c0ab843459699fa6012a757730fb8e92038ba433262810e11f350aa953831a06891cd8c6a8bee655520bfd82236b61b7c48b73a235d6c6cce814b2c87365470dc2e6c5fd93c445ea10735d0d92ca74fb21451145cecb33024f2fdb6edcd0dafeceda6904060de6c0ccdaa3ef6dd50461107043b6a6de587f959f3ad7a508b9c3117d63cbe6c90aa64a4675ca4c8ff026861364c1d42eb1e5e6100c0869737f91688375eed8361e27b9206f1db8ceeeae02b43f4332e111589346c7c209d044f253fd441b0a867541e831175d22e1e15bd1c22089073f576a7e24f9ab0a6c2bc3f1752a6712bf6a3f299649854838ac11267cf87afd7182332b079b086a3f89dfb5f4cb7cd630d9f1aca12c2df18b1ce5a20ba05eba8067c02b8565b11ffdd23183bee00f723b997c706dd9854a0e5e19fd1d62320b984c43102789c6838507f8e8bd4f4472f58b09b5584e562a1ca2a15fde4d208106b5747f8bd66d621668dd57f5ea8aa3fc4491681ae51cd6fa0bc86d6f09ed467c24ef972c31ebf84886ed0026be5e7ad7044facc84a5e6be819aea966b40469d021bcc7db902bcb15e273f017c6dc1bbacb63a2a7b057046cbe3d834bf7d46db779aea54470e68d722c75f87bd894d4e6bd3787bc202230c14fba1a335a9439c98edbcbc4f7c5796c585a90c7912a8291d65f6893dc6928171629bb18f66a5e692fd3c74e29c5fcccc6337fcf99360bce96de67c373b99105eddaaefd32efe54ee8a746bea59a3743bd9331941eca890dd6c2ada31f5c81de06e3a8084cc6346dc3cd196424a96250222f522fee6ef844dd88768a79cf8ed9664c327258cdbf34cb89267f875006b75ca8eac40b84c3804b26f65cc7f99d04254873d50c0d5b8db6378842ce1bce7769cc283fcc3023e5ce655abac0b765af074a3d6868294d151fad6005775ddc595cc6a1a39939dc50a4a34809e4be5d0bef3d9ad2d307eb6ad2d0f63619792ec921c8b6586fa590c093c43dcb3bb1aed22c07427ef0adfcc802cb5ef09422b8a89680b295a2d15ec3485f80af6bd5b1afe514cd8951349057d45a0ce1520b45e17c1652aba84e56c9c13bdcd12848c7c3089941e86c0cd3aa796d688574d6eaa4d34fab58924bdd852fa94ad765de3b3f0a0f5955277114cbc1bac0d6ef31197aca4f004467dcae38a79161c3777557b25dbaf02945cd396dbd0acd8d8f6235f07e93bcac097a21760413c765b42c1157c7f28ba4fd1680c17c8092bc6dd3e18edff646653c77d29843a2ae49a04ab017bc45ef928d0c8cf7fb47572d380aa0dc3597e1b57f6c8fa0b7677a59e36540d6eedee3c2cf574dfa85a1861bec77967de5efca581d33d879f997eeb10a31fb723d6212144e00aefb1d132100de245c32a960a08434a4218207eef68c267adf44d3971d2f2822a8781c78ef7183f44bb749982f728f397b58418fa1f66d91fc22a6183784ab2bd36bd17fd0a87d3e205a76b4b9883d43c70a8cdbc5392ec3cdb265b36296fea9d4ab2a73879b59e2f790b875f7e92ddf1aa83cfe7bdc2f74db134c34e9a203671e7f299f4b6e9ded16c703ce12cdac59c931717034c4da152bc6aaa3f480fba4c48ef1fc73c59993dafe3ffcea30e1aba62971cd85790023a6964ab2e9d7f9c9c0e30e0c4a0b332e2f89d24d29b8f34ae6e978eb4249a59736ee38d6834ec228579c37fa3f2afd261269bece6b7ad127f27f4804134cc20cb46413ef13b3d7474e6e44328b899db2211e7b6a2ec6c8b5201706088b33242e9eea4db0e906d20fbd4bedf735eeaef7418bb7651b4f021b9df9fb22535d527d37c75272aec6ae00230056f16c2f8647a0299b6f8e245f7a8f72dff9293e3fee6455e24090926a85c57f55c86b2f447427b410eba0c3d1df758bc03fecffdcf10f0e09ce60957e73664779bf6ba456c49b8adc5f90b51f0e79b0cdc7d803438f622d2d58d5f381299310dfad40b9c8436b41c23221f6f59a11caca844baadbbc693b1241bd093bc797be28622e94b0b98a2184d92f69f53f732e8550d5c3796c890eb285e5696acf6caf0ad2efdc2f0ce837994cd14bc53854b82993abe9d5e496a1e3f198d25c7bb0abc3b5fe03674b8a4fe2a53f1d5eb1aef925b4c7a46b8954046811daed1e8b6d1752c7c2ff4dbd04b8a8514c0c0ceb95bb868ff4d651cdb9168f7e1dfa4ee6e38e9e32360625faf741aab68c360ead3c7ce0ba46d994947762a487ed8dc05a068fccbb0fb0ecf15f27236a95ef23ea8c13631362c071c05ab737c0df798119381833eff8a817bbbc9c24f03a2ede523390bec54dce4f402a330df9560b0518d057112c135a5d23bb7289e596b28c0d4d80dad360a321df4f3e0e46999f53bd88ca0c5a4688fb496364106835e312707ec8032ceefce8abb00682519aacea17480eda44475c772894055fe995c7ac7092c050d0ab88fc9b929f29b894510753ad8797071b0f9185b730661a23f99432e771e3f1c8184062067b0d0b245f4fb107a9078dc197f2451ec237e20cb63301b5c73b09ed7f2c22286f1ddfedc36056b69297d5dd0eb2d981ce7a98c4e24281ca9c9f980bdc5510d30315a706df6e1dfe2c13d7c682e625f9db439ddb078ab87221e222817adf2c8eb571385993ec1c00998892f5631f01bba9097b49b2bf1aa90e7667a5f243c10a095c427a59c765faa252aed9dabdf8d1cc9cd03d0e82f12daff44783c0ca19fdf8431ab41780390814d0eea630286bb724a27e92064cdbaeef6f00392cac8ac32f2887c5ef00c54096042999186e68871654cda7ae295e48a0e76873ea0949aeb9cdef2928a906827f30b5b31b093fa0dcbc98072f651997ba9949f71c5a5e72f797aa587e9a13355a8767f17d380bcee43b5033da6f915e088c25bfb3def397d687432519cbae37050688cf083638303b3c45ba6c6e31f22a9368c5fb8bd1c6bd2da4c5f45f362abbaf23b70393624a0ddc5bbe73e6504ce558921fa06373ead09224288c1bff88ecdb5287ff0c6011fb756f77f1fcc029135f4f098d9c2e2da4ec1f4d81682af57d3b7ff77580946f3e9fa448cf661ca2e27e2b22bad8c874059f014e1c608434f7a8d58d9a2acce81f863f4e129e7342bce1242fe06328543b512720d8808a01568f5692a383837d80a9db36f29430dca852aaeb1f07ed83b7ddcf47ae5bfa5ad1f2ea8d05af5021d616a8332fcae6d6d173739695e42d2b4d588e80c43b3fb839063dc2bb2383b915ab7460093ceeea9b7b289a2833c97f192292abcbebefb83c81f3d4f42985038eabf91b0cb3ac085c0f7860c6c51051ba0027c79f1fe18e7bde4cb591d42606f43d02455145ff9a5d94f63c7045b265707b01d3bb8ae1c9564bb94cec20f35212e739e86bc9defb4324a71a7152ed2cba15843757fe13a48948e95e50521e1dbfd3a9c5e04bd639b25cf5064c5fd0ecdb36c67c410018284fdb8956c5b147b6cb599119b5effb8082284f0bf7624530328bd192983225b8063ab4d099b523d5e90af1c4f3a51e63e264f23a7abb842a682ddc0e4d48d24d88e8e6098a2c68e9a598c172ea0ee37daa7122b684697042829ebe376eb3b6a80a49fac5dc2d8e2cc03792b8f95778421781d5eef5865da63d5731449171a2002cca3e128c3401f6f1b2617778e2523036bb414cdfd9279321bccbc84a3c00d5223c5d50a234cf6c215c17e2286f1fd23e9a560a0aca0ff1373d9159a8785c9f8e259aa7191d3a5428d9894ba4d88303b706327e54c66fe3f313094ccb1b8a3024ce0ea5d197a6a572b2030e33549db812830a7667a3a8916efc3e60af5b4c1905d3f6cd4fcb8b4df41facf93e45613cbb437aaf1e234995ed10de98af7ae240f45384e2175bdd172d2b618a012973f147469007857c2d1b28e02a6f089e2dc95782f81d06c024584850dd4e77028813ad48dc813677d266f82a05c4cb6f60718f8f481a744f7b893495563eefc3e0c52807330506df7547d09272a5b92a4218f3ad53c5d6c2147da8dde7eca38da0087a33982df92a4cc3ce5aa3276c9e212e200003480e59ce2ea360e8cf0af470d2993be3862f6290590f71c0bd32274e1ccb43615efe9617d7ba8a7a6118021935dd1d23855218e1a19b20ce494eca3aa87edf63bbff4c0eb74912a958d91b9d51f1cd9cee3f11b109d73cf6c64a8e11898b8d25c8cbae3493df469f1d9a6bda59aba052e2add658c8c601af4e411d1b18a9710fc122ce3d454693ba09215b54d12d547c8e79dda597874eae2cc2285094b5abb921a768d402379cf1744d1af0efbb4c02b7317629c46cfcb62986fa0358cb8afc390e6b2e86ecf0ceb08119862618ed3b3cd4eedd7dbfb1e555c4b116c0ab07a1302a29da1809b628221cc49520c24cfe3b925f8ec86a8c15c2aaccbdcce89809a52d8659ff764e9d33a7cdc74926b0511922c2216221529722f135c4d057c668703b47f2213f3b3beafa1bcce9f60af1911cac22c5aaaae146a88621b252bf0d7c3b8f23c7b92e302fc8568ec2ce18bfe7b82eb17cb27adb5365feccf34a340df14ebd88c3e8f25e7d149ca02db37d09551049d92074be014e21788ae7be8dcb1509dd4dcc36089a9072806df560e612dbea2ee0c131ba2bd08ea0c72421a2d443877500b60ece1838cff45e5389220ca8fd5c94d93f9c5216a27426524ccd469f0ee3fb8af5f5ef5cf1106a1562326bcad9378809b083e1dbfb5b1a5b62541509686a7023a5c53a895128d729b76db3b7b5b4927596b38922ad662e95070c333973c475098c9247ae1c6c2824e21dfd32b3443fe10f71d203a53ae20848305711860fe1baed3063677198b0e2fed7d5bb9bbeee249bc2b85656743fc30fffdbffb39f6fd89fff793752e5ac602c2c6c613f655ec88c780ef7a7fb013c28eb734b3bd5d7a7588c5a12cff619e334b4e6e3326f9e03ffa6c230e6ca00f5132b242ecb66be2c6976c271f0d4c01965f27711d115d23706347630a58256c7b94f32740c762f921b4e4f8542b52bccd88161ba6053fa24b767257bc40fb01edb2ebdc6e686f08269b3515dcda2681a98965201f6f34a8f1824a3aa0f2853ffad5facf9438d2a64ad56894ffea18325480eac6e4558a6cb7707e0a9da836c7cf5cce62f649482de1d7f63a51bbc3c423cbcbd3a7007578038fb308dbe6e27a40388591f06f10c32394fc208f9b58bdb05b54b592dd9ef64feba129937acf593a11c21f818e7df31d88ab62c8a31e4731ebacb3e2b0b30a17f5363a73bb0f20a8be2c7963ca72f31ac932f4c533988ada2e6e57baa6d4edcca85ddf6310a73b2968d0b3335a8d92a5b576ec7d8dbad6168ac484ff53e35d58f157cbbeaab4dccd494d9384a372f5a06d6d4492268dcbeca4cdd949260aef3825b4ec097e3b523a9a8b04598cef850076a952216e6530f9f8222010d79e6da6ab57f85e7307e09313d154eaed8b48eba163098c51857b7717e1d861e944f0936f13c8f96860caa7031175f3a7555347456e9e5dbd922104189fb242cfcf9a9599771214a9c0a9b6115fdcee99efd9708937ff7386b156ef5b8b9c18e81e3776d1de5de39da75963deaa1c4ca54b4c71bcfdee5f072312593456326513a4789dbc787930eae7708ddc22e8085d85670f6a2478029e07b3e6cacbf893983690fc42b2c14b242919a65b5e93cfede1e8b25dea9afcb01c2b48dccbf2f36d62877a15c528248fad1715dd5cb8460a9178458cbdc31fed8e80c9265f7204a99b6f3f0d71bcbf48f17c67bd02a200c6a16ff45b594ef26ac7fce221a7975046a3ef18574c1e3b238cbf32ef7b6963cb8830aefceb2ce6b6a6cd04d13de117c4cf15c4b020f3e03dc8471a93b665ccf8645cd53123d0e51cbfdf555c0ddeb3f889e3f5b359314e0c01b66d89e3a3907e4f81af404f5d86cd49259c4677315a5d7d44e6d8bb401d432034ceacc97637fdf420bdc899dec9ebfbcb7e7e3540f2d74ae6338a003ddef44f45728b7e2d19d52b0390f06659b54593dd44b93d7415f73e3bed52efed4c6a366c2c10ae79fba763032af6dcb8dd025d27e442ebb247a43d27e5a43a37005b7c76f8310c2b74365261cc053b73339e8dee9c983714c4d911e4d6a091b3842986356df6dc7ad4b59280b5878af6f49b7c9d7d5124101a2c4704c7699810bb1d9eff49459ca5eb3fa0623277999022a831f6a05afc306c947efc36455f78a310bb0b79def1b0afd64861ec8ebe8d0906bfa591ceb32fb76a9a6283e7abb72e9ed0f482bdf49e6041291ef7a21240a84687aa9dad48f75327ba4624714f4c8e4a0d47b807e872590c9f04cc0ec945226e4bb2d93b2316f1bc13d38bf0ccda21221c807945e7f0d649ed6cfcbf08e125f2ab2f279552e3d292e045b74a6d75d46db84fc0e8b93d9d8eaecae1b8c7c8678615929144f92949a8e635bffcdd78aaec423cfa34fa933622419269da4f704bf27f1151ab88a5e0896d6ef22344bf8a75dbc7ad2d93fa33bc469776a65781b3ad108938cdc62e9f126db57d7b56ce216c8735c5e6eb6209f2f2dafa81e540ff018cebed75e9011155a6c37d9a404362975e5cbf8bc47e32b97fbc0514845fd5c743fafdf99187ae93ee32a7be1e4ac10145f3b47f8e483d336dbbf0c9ac9dcfdc9f2b06305c14fff0656bd8c7ecbdf26f7475ce29acd28d7cc02c85c9184e1546e75f47974222a92277f79116e994f4a57f2ea080605fa3fa30bd26d837db28fcb28e8657bc4053e1817c125b718635bb48af7afe87418debefc2e5f790c2f9b11dc3a889c97ca0f6a73773498d411c44c014c2920f068ff1a9226fb49f7bd3b7a30a47f9f707402eab6e649ee44be8155ba0655ceec927b6f4ccd9c079202f9fd2f7ced2bec9f5edc942026e88eca9a28c836b38a281e08e3075733f7ae7bc8d23f90cab7e4a590a16215c151194ee7b165a108e109269ae6f2ec30ada5adda34ae63c0c72e30abf5724431f7759bd18cec75ee7e0153c0396dfd16a60e04a272ff62478f35283df70f92d0bfe89a3574eb8aa3c75da7aafff89447293425ecc8ce2d827e28d2ff6407d2b8e64f6d6805ffa30b92317208051f646aead674abb4c273c3d812ab3574d68f975ca77a1fefe44a1f9d8efc41f4e23f6e2f9e4bb1b17056c3605bd929217f79c1c6f6b75d0393015966b9541c68a98d9d0a065be9f6ab38e4419afeb3f449c1300e36af86b9fd93413d02f217d248a5bd297d31c24e4d229f2bd85ad493b0eadfa85696c6904555efcd15a5e8f7f428ea6d00ca4c54ec599dfd64152e2429e563e712e11fce4043eed2ca07b4a02b12f16b8577a11ef899436024df086d4a969c9b45d0b4d19b7411ae6c845a50119c9dc93d9ee9eb4b2d39e3e1b430280b25b02d2ed4d7e75fb22da5df2df3c6c91db265703158ebf2d88c98a58499b97dd30bd6eacc22ac82b9a04eb1c778f8e60edbd287534f3ebb75cde9d8f50da7f9fc20df8319bbaaa5cb684e4b82948f26efe38eba4eafa4a68accea5904265f11051542f7b7c5e477dd00803c7f659cf91fd631214d2aeddd09856676fa6797403294999360934df92c075caf9fe847de308c54ab1dd0914703abdcbb241f04840773166845843510610efd166fb01c54f8d358a47481ceebed444fdf4f24cfa617f20201e46d1d7000368299356ade2ff45cf227cb433c077763a74d24bb8954619b8490913cb6ff20c9d964f783dca9a41f8909badb52f29cdc7c91f495018d12c38425ed4e706e6f82a994b95d8483f444eac8e7ca62f5ec3bf27204c7840a64511ded9e9fe5a8e8e7838a1e6c70f6b74127b3a107acc9b4b0a279205fcabcf41f693512803a0f2d9decf54e0a2115ca661a189a4717f511dbea515fee0ec721313f0f936c625b27f1937fba4dfdeaf097517098c80c3e163278de64b368f346efedffdfc2f14f72e158dcf776e13366bfd73bee5f2701a9f4f2fef844132e53baa1f203fee66ed7bf9725371220c6178a408be96d4877aba027a99385a77d9d29075c3c8c329a02005aff1290898e4db90b1b52bda6dcf18ec2f974b4e3672a85ab2513b367cc9d5dea4ecd38256a7f59f70eb493e62a2316b0af3ab14130795748a619c06fd24e76a9f2be9d27fb10065e78f52463d1a683c54e9c27ea631ee404e6b9e7e648ae6989b78c150fe582e4a3f8a5499d4c9a370cf7755644922aee9b7478faa7661503bd6868d4c6d9689e3c867e974242e23dade06039af0ce9d5dbc53c758918a6febd58c3df68f257cb51f0c79a056cb44e40d0db9f89b4fb286d1377d947c632cce4436d057412b94548eb8dabf67f07c418dd5d3b8d87301809cc303d33ee249e6020ea093fa5861a7f5496911b2199da1cadfa0490da92f990a7853d2ff4af4c84dcfcab243a3528878224077bf18328114163859b1ac5413d16b2746d60be3e363ef660c0d19cc1503f0adba4f3e0cdd6be08e38451a969216ba2642ce58abca72756fa9a9d7267998354ef2f8ef7c66c8c404a3e3aa8ed289bb6b7770112ae6a7419984dca5420935a087e1a433edc8a458ecebf9d6e7c338a50343115057c3ea51de8e6ec4268264400c55076d674ec93e75621ab6fd474554efd2b1153f6cb77d2f6fc53ab8efd7f4bce3df36761d5f8ae6fead550088d2ef680b3cdbe37400bf148263e405b16c0be08fd32519f36de122d0fb688e921ebf0686a96847699981e6558467873dc9b5a3b6169398bc2051e6d214b9d377f33ae990536e17f05f69140b699169b6d9a7fb0360de24716848afc03993c14fa40bf93bbc21bb5136b1d2ff8b1b48edc79ae0559c98a08345ba3e3db0a4229e0124a853b5e7b3da3bd74f13f517dfa0b2028da1f011a2779ee47343db2dea432fca76f0d82b8b0d4f94d7f60db2d4d81994fe4d37d2a651b21423caa875c63bf79bb947bfbb9fe00602fb1f788a96c84144e9c454205f62d0479f9c0902311c5d925a4ba168cb0ccd04735d1924ecba6fd2f6dad6fecfdf01c0a61f8685782ff1c1e70202c17a7fca88ce02cc60af353a15b7d6aa819ca80a73e84e4eb86f876122682e4c961543447393a08be7bdecef8cee6464c614a8dfd09509c3cd7ea61719b9a25ce3d083746c2ca0c0ec50f19ad2b26b4084cf681a8aeec32d12e2e121537e9fc717fa13597202b5234268c6460db92a4a7d9c9edd163fd5ad473026684caff1ae8957ed5f23c146c0177abcf61b564b40798bb10a071cf48c743a68b618783f57d49501230913185ecc98b74834419d1c0d892613a5c7284e4d4fbb40a3c174f62dcded7eb910e8ffcc88d5fd1b77c5e8045c1b2ffbe228d5f4983ff441dbbd61fe45ddba1aeed78b68706d447baa93adf2139e4bf505dc0ccb5ba8076ff751d440ed8250dd1c0483f29230a5f335c46f1f6b9721c21087604f272056c7d0d0d102804d7c733c9995527ab00e0c36c54df371198bbb88dc022eb85e44331b98917f8db9d93378b7d47799f2c5453ccc3b4fff77bacc7e8554b4888ccd6d5b287e2a75f0f67d4275f6f9b33d07f26cbed66343059a94773e356a72b15bd0d8d9198ab4fdc0264b7c436da7c6eb7fc4071be230d2a56568ec12b52206962368a5e20d21822b4232c6423d937a87a1a9cf42c73aed68dfd962effb45173d975210442dd4a723d1f251bccdbaaeccadc09973f564c71efd8fbef831659bb14fea7bafbf5d773eec2a26eb6aa8b1adadedccb875f63f9b08aec855c41dfb5e754ff5cfbffb0c832e54681aa12e31db443f23f5c9918adcedbe53376a2ed842f61444a3108968b40ee9a80096dea285952ed395f6512710c744001a99de7cf04d44bed3f7433cddec5f868031b7e33d6061e8fb89a4ed22bcadd5a7fb92060dad3401d9d86dcb70161085355333b17957fc4d8a06882a15a17df8b1e32cf7bcd1b5a2d9931a24f8157311c5eda95a45047ba105528ce9fa5ce8194ace8f86b97f5e22afaf8bba0b789031576fba81f5ab09550e7d24ae875b00bc734de45f551660a6317eb5846debb9128dcbaa94f7a1446131745e3665ba46e42ac29784a77c736916a915d7eb40d1b5a6eb2cabb69b13f89d6ee437ef72b6c85f86e5623dc3d36b5943c6162a70cc08c53af37ac79d6bcd8746f8dcdbbc79225a15e185d66950a9a4c56e7c4ec6f6daa1112d6abb53e13f3438df7db58dac4e80382b4a6da72285e9f71c89d21112abdaae72c297248324bd5cd49250fdec835ac74613394e0ea46bc838a581dbcbaf1b6daa2d2da85e61e2be02de31a1f4fd607fc8395b296453beaf43809c2292f749576d6a0a8d03354d2d4d66f539b4faf40b9876776a5d9d4e2d7463e4e306bc6b3a94cc5f8e04883ede52cffa95f986c539a86228d20c2c41ab43b89c3def1a2f698c367ac9e201c915b2fe95f48eda0db57a94f00369980c09ca057d69658cc87fb153ad83e897a97ef785e057515928d3f776da2857e42e079790a755141de98913a85db36ca41a851f2487adf843afe4df1e354ebce0f24aa947941915c259e6548cbb9187c6348ec7b81e96c75f7d0fd86567bb553c02b14370b03199f8fd697c8a9c8b0836992e9938e628ee53531bb9c5a5ce61776b18601f0482205a4eb36837a0e98e5f64de8a6fd81b0a55348d517545dfecdc59f7e5b104f54c6c2caa50aaa3e9459b2f6d41e830594243385a79a11d8f4ddd819fc3745f78811c243c43cac629830e9d0dd1bdfb9854b2f0dd3ff89c9f2b4822749e2911a59c964d5ef391d86053d883f3c1269cf7a8a46e29cb1a1978023e1b889e6351757594626c39260e9e099a8a9818e4f22c1736abe6afd26a436183254c1bf5724234cba1eda2f4f17ec067f38b17ff80f9f641470feee6a8614d9bd8dbe3385ba45938b79cd0b78d1e7d32fcded92c09ff89ed0bcdd4785144458e4d7f11a26dab25b81e143d1964f822637b43ee95bdd1cd60092a4de7c3b4bb56b3119df12afd7a7a086df537b052fc704fccb4782ebf157eacdd4620956fc4227159696ec177298f72d8471c1e518ef05770141a9117a5710ce73850459b22355f9eba8f315708c6879bcd28ee2002947701336d12e5c2c5163bffe2a12bfdcf8326bf58c36ee96c0bac76997438223d3336f53b6f5c2d0d0dc11deecb896820a6f2eb4db60fb23e4eb875dcd055dc69445050b22c64de2a81b87b54de6ea8ad827301f617d7cba4e8fa3d026d10a3c6db666fffc01a5be41e91c563a03ab38afef36708c91fe1d895a11b47cafa441164f265ad0354487d097c2b463c10595de34db519890ec0dd425b79f4045dd4cf00d58798c8b585646387bb83933a684714ecd457a9e88835b9b7f67277dcc63c09e43d050971d55b5ba11d9d2c3b78a575ce66027fa4a02cc6cdd328cff85d723908821de8a8d0ac09c7c4bc0ebf2c8204728f4e18769794364332d1bffc6decea4027eb223fdc05545633de0fe37ca4cbee556bbdfda617ee318da947f5effdf72adc5e98dfba78019e81462b0a18363b8e45f02cdc9e8602ae66154007af58521f68403a07c1277302c09096dfb79e4e785c5bcda6a4581f51dabcb1b6055de8fe0f050f134560aa7d4384f4c5594377f8f8a6a2356369cec6496371d9249c0170a7aad8d3458fce60f8b9189de2035c726c8d7049543dd2cc0c12b373c73ebed37faabce5028105b46b6ae2e3b20fca288b3c8aafb6a583274355043b31a0a806d0ea3b1b96a26c8fd89402ec4c9e162a9332ef92e45e64d7872b74828396ec92d49d20869a37962e944dd09c1cafb5febd7c72c50d23aa3fd4a62b583708562c1c787910c455e1d9db556150431c75b1b019938b1cc6807f642875d16f65534d2d1e07079a533878acbf557b8814ba23e700f9813742ea3531b2a8f89653c1e84335f67ea86ef2d9997f72d29dc595db5e6d08df28d22e4028d22ad353e91c4979d32519c3f4400aaeb3bb7556a692760f4d27d0a12e0645c7604a0f3a7fbec08e38472fb5338da5ff42a2d0878aaf30aa8bcdd3545fa3c021b97ca9ff61bc67e3cec8b762e7422f6bad3b0b9d9e2e47cd66e19305863b98bfb128cbbd0cd65a9c404d5e5c060b50434c801bab786a4c8df6ca6c14f63d7b8ec947e5877be5416c16d7665661a722b5bb18b59ccb345ecd72a4cb4c3d967b36fefa33b72cbaf1af41a1f4db1e4ab72a05cc48f857b6cb5c2a2fed8479d5a74e3216a4a415dabd0d6ef60efaa45cb4fa51dbeb4c2db9cb2b41826de3fd0b3a1c35c680b6a7eda54feca7521f5998104a400becaa0301cd4289b477ff4da2e4905c599acc312eef492e14adce239cf650d1bba25417ce9be69a00eeb25209f60be103702fa0136b19dd4de8b66b71397c2488021714ee93a4790c187881bf5d725da9875a4213406c8a0083a4cbf1708d9248c0447fd95ca1301975d6ce22efdc11a0c8ac09544c9da40299d4bef61d2d019aa552317d8615c4013b180992b088e95323499cd2064e48afb940dc6d30000e349fb4b976064c9441735822c4dbc7b4daa84160296d9c937e2fa2ce090e06ebba6609db7dd671e7ea9f3f371b6f8738f48517cc22263773dbe010b10b2529ac80aae36c2a28721aa8f6ac4f523beaca7227ea8a044132503b8d22d16fbd40995b859ae2e05e03132068f413986748308ebae6ddf564093da211dae1b656e5b300407af4ab37483e2ed7fa5391af86881b56a3cfbc5b38ffb0edc7b3ba534629829fe598b5907ad0c432fcac7c82455636a5eabe16a2d0ec4654f1dbd229ab514cbedda5310929f2dde51f2e4b5359e870f087c78b2a05657783a6ee9ec38e7c44718283c25ea882ee501c1d3334809be52cfacebc19e3679130119bce850a8af4590f30e6991b207a1d91d44101a4d8e8e8f6a65c1df94668c88c6e11fe685cc48ee2906062ab9db964fd21aa554414db1c436da6ce02b0909c3a715302ea71d7d56ebcc7307dad1f8a5c9f5090bc514739ae40b485223e0a92de5922d35773fcf75f3283ce2ed7b8bdbfe9cbdec64023a1c6688e41abcd43df2130489971f31ceb66bfce7b03403d7b726372a1ccdd4c5f07859402d9fc4b99c51efc9f8cb56b329d18620f35a3c54386931c287f8bd1a4d0710a197d47deabb41ec147d9d0fd12b30b652d7bde2300576ca1ded1574388fd0d5b24df98d32d6ca16bbf735b1fde0dfcad34c88b6ed65a7f1a82d535c09bcfa289b6e1c403fb26fc5fa8abc66743cd4819e6f87f095ee112dc8326b3795b9381f3319a33036925bf212dad95a7aa872e98baa473381d141e4b7b9b87e63531b1d18622a29facab2808b5612b765e0c28e84ed50701f754f802c5abcf176e79ef15f9e4d77ab74f99d021779ec6e8ac7fde268846462ed23023342a47236051f30126c9bbbf259dd860b4ffd751295a760fe377f670cf65cc10b9bc5b8b23e34b4fdab7bcf14cff8161b262146f4673041d2449b941ceeea8b9a0234437d80ff848a39fcd1a037d54d3361caf97b3220714eacb94f5ed88a9ac190ecb7c927c27a18fa9e882692181bc91fdd8808fb30b4088a2816bd61949f92b5edf9f0f44ec7f87f1bfe20c4a2c04de79fe866d932c4066602c5db1240bd0396ebae019aef8d088d3a37ac518b31866324e336932f8df1e8f980a8cc09d1f6175da258066927c882c098a2858f127bf931689006448c0a2d2ff15776e6ee065f9e7f58ec95b46a26d0ddb92de62019c45550116956a67b927b296b11c3d70ce07adc2e3b293a68c54e8e7ffce6ea550b79afc1a1e2c305fff0c361749fec28f130df9d520b5ba0b8bd24859e69f0b4f08eec52b8d121004dfe53c97fa3785fe39822d200cdae435f42444f7461cbae2bc18371b6914b189d2054e2cf0eac48bdb979c186d478d817e151f1e9426980be2d3b7e49aa5ef3265e102327db969e4b462806c4a059f17decc852ea38534bdce0c17afce0d35bdef8e21e86602294fe2200be573e0908ffcda2cf8fc5c55cf8da7fbcb6d3793ab13d77ccfeb3ebb7942548df129f2f5d3afc7bef4bb2963eab78f0324d82772fde29b08db578707ccc1fa8cc4318416ee455a77c21c9fc7469798b4c38a3cefea7e833673634703f0732fa8a2942d396328adf43946761014d1ad4106c7f74df22f8d318723c6da9e0ab342450afbee32297b4f529d719ba53d77fdaba3b56649b67eceff4ae41b76507304bc45f20856e46e54e74dba64daf5a2a5bdbb13066bb408e9a86d1b44bc2b03658ffe96a86b2d3ab283803d1c74e005121c905f78e0503be47f4497ec145551c657efc59e6d667307021dc4e24b4a7b51f18a1fa78324dfdb140fbd194e883b5fb1f26c4424db1dc9f57436c0fd599fe5b78229fbd4940bc7ab2f2393b06b2fc6f0ec928f480eef05f9f8051cd73a60258aff00193ea17037b12d18c6da0197935e6db2c537d89d0161ecc10ca5405e81146ec210099ecffc0b2345a8c0d9fcd676670020e4c9395b24797e4c7d5efdb8969af5e8ba5105ad9d8b7b0a737638377bb500c1e040e818d986b524e25bf4edc04124b3081ec5d42e0227354ad95d22d966b8f3e38997ed2f2d5febbc1b5f400618aacf878ade3b21a4faf34870ef2ba67fc3181cddaf33a5461b66bd5743d02e73543ac53e82ace8ec6e087be1e85d2405532e04aa7ab2656099c4785a57253b62d7032d961eddc340aed4f6e82a3dd7640c92a06986e3ad42574892f0da166b2eb08a82782a2b62bdbddfd4a0a3252292206e9fc99e9a0f5c878ca02920d8c61e3d03b4bdd1a3c4c5445af7fe4ee7edece709486a0812b4b9f25fc0778dcf18c83ea6293ec0c7e61b120bcae7ff9ae55ec937aebfa3e25513d8cc327ef58eedcefeb9a41fe5b0e862031cd55edd08d490a7669dab693d24078bb8bd632a5534b43c857cb5ec6a27c65aea5ac82eb78fcd63185fa08578d7c5f8782a78977f731e3fe8806fdd8c8cffe209a6584b6a10f2c4927135cae3fb583d369d4640621d2eb89b0da249f5b7f1cecbc1c28a691b038c5a9a542cabfe5dcc82c13f593696b782d7e0c95ec9c9eee54404790c665368a53f1a9f94879ba0a9ebd15fd8c46e72ed888e6bc37da23e8cc0b4bdae6ed0f157016af8c3f93a246188634cad835672513fa21dcc3811e3ce531188fcc4714ee5364ad4fb793cbe5276182b123f481fad1a9814c2e66628541c0ef1b88d73a1e311019ea25c0385850b99818d656ed4c51ef942447251d141e7be08b938e6e0a7b4353574d51b4040362d61fcf3ad376aceb6673fea8cf0048e8019295bda29942549e83584924c5607b9b0480e660012e829e27161448b3914395223487512ffddb4ac5d7509843179ab16bce72b43f215336d1663a95f4f9f890e825cfc5d555ab4ad3c41497c1dc6c42d05e4da82d708598eba7641be63a5ca0724331963667cf5a8fd8fb81c00ea0fcbfa60f1b2195bf6ed3ebce6722f2c867bfa53e75b6d21d0390db3c4ecd4c027af2ed5e7d99ca77a81d1a59ce6469304bf3ba5c627dd37c6b055b050555a957169d40564d491739d2aac99d178454a2d9004ac93ad96c26433c286a190696d15b3c78aa5febdc1d7c17accbaca56c0cd3eefb9c0d3a20da70ebfef5d20a87c501ee463bae5ca5d7dc023f0973d3bbe0d2cafb2ddb14fdbbae86dbd6286c2226e3ef073af3bfa0d0fe1eada7b550231ef4bc891479e77c1f33a6453b16ce49f355d20eeaeb6837d08f7da556d492caddc4a6ee6283ea6fe9fd578facdf5e811075712e2a31729a312f399d1153f7eaf301d45b7778be4db0f8a559f88026386156f7c4cf60a99be12991794635ebcdf6748c8f5d226b93f69a75cd1ce6082be673f752454b96b09c5b7f7b444325a3391ba5997997472b826b888477e092004bc0e897fcdcb36d61b68aa3e89784a58c97c8450e5266ede0426ecb2bd3275601b13ebe66f4a7215421bc09b3ac1b858495355dd4a047f7dbd0bdf4f38187e57bc79c34ca0ad20881b900a9f90a9905e1b81055faf95183875765d6de9da2f49e1ca1aa240ae06c89c46ac65c6d16f41a89fea4984d9f78d3bb380f0d05b723c953d21c7ed749e178b0c3ae088158193a98cbab0e0513f7239dd3909596d73cf7468d6de229b29866af6ff3b1a7469abd0c9221587cdc3384eae5c2e860797444bf822cc0cb5253a2cd2bc60d59ad74eed29abb51e976d8a071ced004887c2a8306a4a99445e3d2e7804aad33e654de4121068d09b3e80e9633d64552915ee0ff89ebf99a3449e22c2ee3b11c73a4bbb21279af935beb7335b4c0f7f1ad72ec85e3defb1a4271f7c0bc0d535c0b58885b146a9656c46e5a714736e257944caa31f9886cc3b3caefc84ad5d3f649f87cd0bfaa087c2e2fde4742eda703f4e7b29f1afee43003bae3375bafebd2e7ba457c32c26f0bf428906f6430e6706e1b1de160ae164dc4388b14a2c3794e77dd9c6fa722e0b8f178578bec69c59b5e69ed1331f04ade642d7433a9fee1933c6f11753c000b91df42d4a04eb80f4bdc6f2f4511f9c9a5c635e464a694c982521a398545a47d0d142ef696c6578c55444661057ab8cbb46265291a68f98244a6b62e43121e0ec1912df722b483513aaec7313b880e8a39a9eb441163646646bf6248a639fa0d88a34a7088f0f12ae35dfcd31c299aab8b60b0c99fd10a7be34585da6c1c17bff73ed554e1f8200f4af69d8409df6002a2deb48d37294031b1ca7be7189cbacb9725e3ebddb06ca7e3a64e79060f1ec2919ab27ec91d0aafb988f06ad9d85bf7dfda04d5c0abe3aa515b32ce63873582ad57f3783245f5c72c8d8dedb07f84d9385d6567ff1442a2fdc14aec7622344d619139df05b38a1550e1d994ea9ddb55537c966719076752a6f75c8f1a345da63f2e979a3ae8bcc638b4abc7755838d74c1cd033bc9ab07adfe03572a1cf1d1f995fac2ca454f6af9e07175980abcf247c404f5e721cc6913a1637636374a808cd5e71cbc111b628a2896e8f7adb33e943571749f5000ecd3c9fa8d1adb78025fa2a82f14f4a30dc4d2078007c1e2045eea2063af5ec7d07b4d31b0e8a3b493228313d05d4488d3bc93ffb0adc27c028aebb8f9ea5730e7c92c87139a73758192b9c5029e6b0a4d19d4f41ae9fd1d67a06f867094b385019eb76ddc6dec300de6a4967139d2ddb24c4f6417ec445a9c34eec6c916d7f11853de4a9507de4e917ac39f282b06bfe757ff275cb58ce770b1a096d29be6cc06c9ce8d52dec56589fa1732c7d1a3cfd8de9f984c63ab5016b784bd1806483927bc46b70fca2de1ca906db4583161e22bc9091704f64e5eaa27d69dcf57acbad3a5bf8321e8c9f699f109aab9c2e443348b0462d329a80a99c1aaeb74bb1a9280376e4d57a19a7aec949ea07bf76ade9832eedc1e3b23a2f16a763ec9f98b58eddcc30917c0c4c0c269236a53688f31d6df111f8ff95c94f9cf980ba86d2b26ca59337adea3bdbd86f3bccb38245f3f66ed5d44948f1941f3a796f4371fa5f9d3b637e8cb07f9ec094916a0bfc37ae811d1075649e27a56d4b99bc3d6b1c73a1cca13c44a74afe69f456dca8627813f725e5f30b1e1c1a424af528c2acb23a4b9281a11d91f6ac6e7a8c2c2ba582a72d99b400dcffeb6da38e45f4f2a1b3d530e2121cd238a262d38a9189421545ee30bbee318c73d1024d3b15c4069e44b4ceb03a03263af4329a5f4717aa1bdec17c4e3d9b5b003a10ee18ac47cfe50a3a3107f3e7c252f148e069b7fba73ee2416c7d3b9926c40a131e3a55a84b115baf088cafa1de280f15de819349a11042e2c6a22ec83865506844084f33ad5f0b7305404d69140425ad80ea6470981afac63eeb1812c71e203874916a6cb351bf6a250614f65c5e7c574250b80b269b41bb38c1eecd8ca012d4cee3b3d5a4d9ceb019a25ae8b0f47a04e038770c4b45a46e694c273b7038a88db772cd1993684a0d3793e6129cf6198cca3e4dab5995f4495e08586794fa6cb3b010bb08a184f0af30338232c8ab173c098e28bc82866e8793a20d117311f883115de7bde20aad1792026d26753cccee2b4043ccebdb7f4348a3e330940cc862bffb1368910ece9bae61f370b122bece8c2aaaa6ccf79b8e7fe64b34e5a46a6167f65571457b4a0b8b7a1ebd332256f3ff609537750770cd0e1072ceb02c1dabd3d7c92c4d2e4b18a880abc02939d498c01dd0d182f8c26ee3d14b2223d13045b7e71a0231a34a60f27c0b6ca35c17e18413bb4b09f45f8da89026dda113e441426b32dac116c299c22bffc60ede7e97103aba8d06c0055bce4949289fed2be52f34c00fe9a1283c4ce9b4df46d2e35c4d33886fbfa357aea2f28e32b2dfb21599a9d52241ea30b3ad006e28b7b73b6f0e199aac2e274fa56bf888a9875606d985037d5c91a84ee7f5fb530d51d5d51dd69b01f29e38fd82fe714ec32d93ea58e0163fadfbd6454e58588cc6672328dda85848657d36384fc56974d7d082ce251cb00e412fde07deca312af23488925d179b4cc7bc3731eccfb24f5cdeb6fbb56b3f36d6fb923c0645d1f75982ff299eb0594cc1149242cbc1dbaf66df4621ac15f61dd0ac89e6d24b4372e1f172b7b1f3b1b54daa3645a1802a72240b8b80e569189847a0dd5f0ef8d3cf02ab625d261e0f1de18babdf333835da592d33a68018b5ee6ef1a1c520c617a2d0568aff0329b54d7876d7280f0ba2716acd9e43f67dc32fa7d487cc6c1f6d3c413e7a6f1f448ea3a475ff6a10d41cc9a86a49127b2ad1d68b40f7eefde6f69bcbad83775f5e7c2cda132ba9d561bff43b93424ff693b9fe93b11178338e705ddcb478b87a2efba493a068790fba3580de0d8191f3afeb8bae53cb86436102c0f2b82823fa8420943afae19d6a95aad0391599af860dd08ca79f6211e0ee840082f7123ff664a3c8369c7eba1bad07914372ac5e3fd04ac6d7ce665ca82d05ee3047c4633f81de0dec3949e5bc76580a09f4bee6aec4c1148b8cf0381cf222b0b36f35568086a8c6d6b5bd5f2eca82f05bbde34733fe15f0a51361543fe103628b01ac8eb910d5d6899a37d87ab6b539a81808ece6c6f6af0b430f7528b7b5b45d1f0bf7e28c80b8811a3db59809e4c381b61c4b59efc0d12bd38549da0c47a3a07312fcb705df5fec9ff557dfd39cad42a1fe996e6aceb66961d1d0126678a8d750d7a46543fae695f3cf8cfb2e997f7e31aa01b35d8b9b3d923a6ec040a08c588b06a0cf88b2e3ceabe584de8bb5193349a5911a2b4e7f7ddeb2d221289610d77825abab2dc1f269d9103ec683ff3b010d852d4f067990de91b669291ca39ade70cf04af433d37b6e155025c9cc58302d367e52c899bbec91e4873a23232672e1c3cbef668cb6ec606a2a37da5cb65e6ef1c4304d6f10bad14d87dab818f64708b59a61a0c617e3c8ae19eda0458d0c67e9093c99ef1ace30bd99b777c5db13af3b701b1b9dbe97966a59ddc0d8737efc413d24bfc3b9001a04da7706c8a75078eda477f84af7c9196897bee42bc1816308b72e999cc65352cf13b3b3f673f08848d8012e866f4b77deecb18c9e02b8513118f680e8360c40a908c4516be506d49b51aabf50f857e67adc2a42d4616f8dbe6f8aac0068ef82a537a9a08fbd9bab461667597ac6e3b3f2830d8a55ec2833535eaf9e95d58d737b15e319c54789a261ef94b6d8413526da43e09e46566ae57dcca97538c48fcc887ecc020df1b6fde9a55e3a91c7d74ba5347dea0577a5d774b658414f8beee779d6deb8124e0dab299627fbc04ae45b2246835511a505b0201fa7b8b22a54206067e347a4842cd8b677af9da1d28e2425562c2cba5e06ddb4b40377e01c1730eeffe17f80fb6e062946f7233cb752abfb4768ad44c38d90e8a9aa802e1185c62019d0670c4b8a4aeb32582906fa93511eb09806101c8a6ce4f7503db717949062f691949f273a60595b4d5506d48f9900285721a2a948d9f82e27dabc787953bac6173258b461d903b600bdc547aad4e44d61a942f13c92a1589d82987f2f94393a7257bd6630e57cf26d8dd69ddbc056e799782ef80c94824ea01f91ecf51f7b1b1885c137b39ad047dcd9d60ac5dfdd3fc46a74924167fa0c65bb4d5fe3ba105a29c1cbb4731c2fbf117956d8b9375b8b3a4ed23a9426abd74db66181d2a40c0943207df862fef4683f67ebae7222ff3bdff373c0ef7406baa800538a35bf660d5d069486e84e2497825aae39db0a6494097a1cce1d0df37c9b917fd796e22d4baa7336524bdc863f5fab9002052ee5bc4d760f9f3c45a5bb29c75ee26cd0c559c3c051e9f807c6fc444b3b100b1c907c4cb941b3128ac74aa8c3debae957b578927857b6f77c0c59ce9f17b5fd79b5b016b2261502b96512d7b3ede8e11372bf32936cff4212fb465f49034d177101d693473cfc05940e3155955c1c7a58653d5a8606514a62410e6dea7e70bce4259c8e7d192d56af970b399c4bfb8bf04e641584132d1dfe9f428586481be8dc1fc9c38751d9e910698a68f180b949f251c943a7bcdafd04e5e5397c5cb63baf8ed9dc41b5fdaf04794a05ae0bdd162e302d4c21acf4176347f54a008e32ab4d7e75cfbcc9451ef01bb9033a3623e59d0203ceb3e6ab45444300e646bbd89e42cc25d7b39b6a0f9c40d9d24286e2a2f3c2d7a2f8ec45c9d5b2681044bb4c64851cfc14903bfdef4e82653b484ec668264237b74ce35256fd01856e53c150893df3da782264798b596a3d270f2e2aaf92058273fcf47ebb850cb63cef68c70b013d5070d33c4778e398c11e82a473577e1625f642a5d63339b8672475b5f581369457abbbd11c2177877261f5c817167a6e06401b6eaa2b28fc41d34721024f2bb4717ffb5db160e13e270f9e7a176b20231a8755ef5476f62d0a6edec6958077258146c23bf2a21535a5e82c6f264d025d625bf19f8698f6575e9a1f072b3b728994525dd47838d3ed307b60fd4e0517e064f3bf4734940692c584262c20242558cee48224a9f1519c70bc93f83acd2ca5af758433f9048225eb1a5730776e3cc03fe8f5be46259fcb5bcc256d6f5b8e9053879d593d797107f5293ca2de2015aad9a92c3b35272eadb5b9397e4aa07ad54b4e3c60042a35a49151c95fec35530a79c4bae8cebe899631fbd94ffe4fe69e601d3d431fd47352af99b47455871ebc278548a785a66ee7b1a460d2bf1b49ded669013fcb97292b1618e432f316a91851c007075ef1604fcc0f15f55f5081e8192aad08cfb30d3f6a93bacea603831ac3a4244e8515935e8f8753ceae26ff404889c669fcb9ee27b8dc32378d5d33dcb41442f2d918d1ad6619960a0c5ecc68169f827f6623ef93c6ef5a0166735c474e956f2f8b56ea852cdf5672df7c952759c916dae7fa75fe8de2985eba54394159d75e0bdf4b737824883d2718c02f02e0500cdca228c59b3a343f7374702aac4fdaa04cb3e66060a563fa8a6a8ff57fd29aab2103b136c0c6f937ae36576e628afda0ad29f494bc4c1d92e9683a98dd57812b78138ed9422402de0e0615c03b69151830c1c911397824b91aec7a13fe51f17def525dced9e90505a8109105e5a4e88fdbb67716534d61b642fc0b3f64dc4a7a62151bb2c99e80049c31602316bf7d3bf5f2ad3a083a80436c096e2fb67dc9fa8e1eaeadc21ed360e056b04dd5208eac236f19fe409b490e7e96954b273d81f074fab16791fd7b81dfd88e946ff7bd7e59902a3fa9e7364c0f30fbe4077c458deb94171a01f4bfdb2afa92af8b58fdd3b9b94746ad53cc8a0d3f2631cf21f52b32ff0399e39d4ef3d0ea3fb67861d704d1bbc6a5f51d7c4c6f3d1ca7aaa2d148e01e6652cd0118b93da360a5b687b2fe5e77cb523cdfc1931444f1619fcf9d2656c7f4824907ccb57e577ebd407d1f3a5bfa009409ba60a41d08ee016fc00f6d7a4e642300cf68e4879d91f67d1c5b506db9af2e056d78f692c8a55c0375cd6162b8fb7d9c52af33dd78bb3177423d5f8314315155f7f5fcb6fc115b956299da4061de5b32b09d349f4461283204f36a4fcf247fb644d480cadf2289f7fa6c9d61038c451517e1394f1033d6f256c0833e07112fb4c714bf81a1e556f784b41e88b5410ee06d6db54660c49018227501dde55baa2bc0be5e4aac0d4bd44b078f0bbdb46b20e9b51db30a69a6bb83eab0d6df505313026a6e57c6841bcf6f3dfc36ae7e36ace87e4b0196c23fe0a15240e7a6a2e761953b128c0341c240e37898a60da6b363b205083bdbbfd15b900d88486f08f6cfd6934408c7d08f7b6a07a6f544030d3cde33971866348f91acc33a4a62312dd71634e1f45645de25308b03ecba7d22e89574ba8b7ffa56d0afa26aa428abaca8529132a664c330fe722b93fade3cb8d0509c236b25c1571e8f09900f65ee607f110e6a846933ae156178c41d440f6e14bb3bb83d3d2c175b0c362a49205f3e0af27b56feaeb5fc3e38adaada7d29d53841bcb8f174fcfac6a99f07331dd949aeda839e23d386acb53a33c21b3414da8151d9d299cfec0d1d9e5667b4d4657b97a3a46c3d92b659f5f3d28c48f710d692711cfc56891f2a10e48c7709cd834b9ddb6b3f5038ce123a3d6c3aa6439e7a729c19009b016fdc43bec5f4cdce440b625f02ba6f09ada55254cf290a173c68a7edf4ff5587b79df30a0182db9c0260571217160d63d9109f842b8cdeadbe40a3fb3e1ead65644b986bffeb309166aaea562db77c90e9af6dcca7361298d8951029a4ea6d39b2ee763962eb72a545d89a9f6d41197d0337afe8ca4b185c8e731e66c9bbae1f98db2082309efb1adf92dcc2a77dd9dca808241b41c060837395bbd1bf61d88785e414800e64307dec80efa3702c3d32b3f83ebd15c0cc1e65b08694abe12c4b63c5909120dc8614036fc5516d22190288a7e66c4f1d5ad17afb28a90cda58cd8d66fc76419e34b63e31c310995af7376664eda040818286a4c3312e85a2132ddee3dce8618997c595d1b4c197fb322b501e76b5acb61087fb4730451046ed60cdd22c530c94d16fbb13c01b0761c6007213ad9d115cf9115ec1e462cc0bc39869ad14b8364b7d0e8ce7020d3666379b6c09088884b6e05751b16ca473ca418028f539904ee8c2dfadf75cd2154937f75a491047c4757c4504a273f55741b4c2f0657328b4696401c24caa368a084d6ce8e6716cdc79b13085ca6b7d21a96a11ff77092085708875b910b2f65823dccfcc220fd0b33ace063625cbc2d84038523ec074f78b7d91e0aeb5cbf5db7896ad861ee17db7973638f8d2edcf90d80f81be7ebb8df2b45e1a3cf55ad7ddb67914c285e57864c701ac48b3bcefcae10337aa925b5dc08debbec1390467baac61a8cb835226e4de9ff161c52c7a2519b9565ff86bf0c4affe7a160bed33933f2b709db7428ab9e259b92afa33b1daa695bff2ee41dc41297dfba7b5d499aa7c7fe64e63bd5d18cbe0b0a692759da9de1f2349302a582aa6af93bdd63acfd5a363fd7b159637f739d03817415188b4c5f4a710a1737918dc06aa9644eba1ca55f4504438aac96f1d70215f1d21611da6df36c07777d7095f21ca8ba5a2483abdf25adf5965b615466efa377cc9b0e5e0ef1fe093a41a082c86ddd77ed12b03e08c7985806659695aff46dee240c970554592c4740a0d732b25f59e40aab91ffca67fb0ec015f027053a71fe8936fc0357eb9f9d1526f739973249264364682c31c012de4f213368a393333d6a3928abbd71a3757e58fd220dc999466bf05794ce32fcd641db92b24119b7f8c4660e931597fee5b55136d4964cb45970106f8ee2220bc40196ab63f09077a21846927ed3c306823e8a636595e1c0e09113a073e9f4e4321f5e1ae5ae649b9706f3ea8ef27ec2b97dc92c3afa929bc5455bb078e08798229e0e9acedb1f9e394b8500fdf4923a8b17be43c5a14bfb62f01739d9cd38263773296032381a10f7ed4a3fa559b7ccb0ef4229f166a5b475d8f5fa3eccab1594dc6e59a6f253568610d75c5cbe45b5f98118cde5b56190dfc7873b77a196cbc2539fa4ea3dddd1884e189a23d8a4f928825ffbf1c09428a0afbccfa414e581dc8536a3b82e49669937e0dd8bdac1f4cb8cdb6d8252abad875d94a8682f2962cde19f0ac1c2cd4ebcf69f235e41ff2241d44e4f26a8f00bbd8a9b794c7ef203a3998553e6facafe0466189f647ea52ff0998bc6f4608810a36690117e91edf44da183cd0f61aa0b7bf8ff5405325d92eb6535db553ff0ad152a9731b781eb83791a691746becc2a1d733ca1eca9511477872a29273c600c2a2b917c79a7c47c930de8ff82a85fcb7f63258063ecfa0a8b3a4b19d881a95b4c021b150bad8fe022436bd48068eb1f734c6897d8fc764fb497b7e881de45730859d9448a6caaaab1ee6bb68ecb5e32867fe6e2c9515df7af8c135b2a0a6e745a7c7523f864e0a79959ebb6f3da2f26c0bea6399a5f6e4b03b651224232778fb82e66194373425ea53e5a01a1cfd4b046fa1f48a6e62a0ba610ccad945a1a0e63d2368c53ed1d654c260d07c1b11a8c82244ec565c6a121c19c2dab7ae210fa43b695ae9bf1524232e59eb523f79e795d01e7a0edcc1003b7f96876c4dcaccf0c904a4bb7ad6fcdfd1d42c5af7739040d8301c09ac930223d5eae4649006f46c2c8677e7b681e3a91d847545c7374c22938ccc0dc918e5fe2dd10d21515ed86fabb7382766e6aa582f4aa467e88a2f0e977d4edfdda2276cf8e93545288f59d6790eff44accd449aa55f8c502effb207e266d1e02363a0cd36ef5584680f3a3c7cfcb89a4674c00fa03fc69519b48d265ca813037593a23707dbb91760202b6c72dceaaa10daaf656eb139d11a99abcc9ca68fa9bb0184c73f71d91a2d459e983946045eaa7a41a4aa54d3961d10db68c6dfaf159b08eb0ea267789b3389f4e5917bd6efedd2560382bb71d95c157c3ffd151d8f030be849cf13d9ce1e8fe190527e15858a008ed4f08108dd5532df0a483b9308e7e20ee127a0bc97e3feb09ac84e1e6413f66e22022484661f8e1ab46915d813881a93e062ee6247f36991fb0b0ff21464a0ddeed202b6b82f7c2b24607d75132a6925dc67870d380602c9ad67efc028639dc082706b3481108cc681acd0c87d7e4fce10bb8ca59d78b7e6474bd9c5a07b524942adba37c7b10e75399170045d7731a72c2bde60b277d1e5a5de371a5474a4c02e17e93d5cbf2ab7b1d1e6fac0188a894b019e5e17905b2f99b8956f3da0b518dc10dde2d41881368cebac607e52892536deb4b2c462758022cf68b5133671b3964050e51f713d0e56c26a5b9cc49fab42a5a8d5c109550d392073f8efef9b6f0c55af45c7b9a232fe8271ce6ef36f70193fa7c3f0b518c368f508480f23b7205257fce3a4c8527868888d5c0a0923fcf4be590cb1145520dc3863657faaf7dc4aef3db0fbf6ab7bc58940adc47ed2d9ed107ca2edd9de4917736e6da43bfe42d0c9bc136ad6a2254ffa23ff93145095e1e313bebc365ecc85b57a8162d7ede4151523fae3e128f9317b7d94e767b1673209a627181a53ea0a660cf6a654e5e30f9efaf98bd31c42c56f0214ceee28a96cc0b8a006a0fb942b924a7963e20bdf63dd0e859811559fcf5657ca82f8b5e47d8299f6dc3dfff1af76d5f8538196e905526a2e747a9b8d31f65f544c9e3762edd330a53f5fdc63e12b406162f3c97ef5ef57b41496d1507240161a7055f1272cd53a6d3eca823a719da11322ac0828574f614502faf3d7ec78e3260b28c1cdedfd39cddf03f4db9da2f70b74066d10ceaaa55deebce2035f21e6e8e10a6bc9c35746dfd8326681b708f42aa3b770fbccce7c792586ceb195db5e498ddedc179d91aa362906679e448b4001938317f0c2cd551d5c2f71930b3f200879abfaa1e35189b62865b3f8e6988197c4d4d9c398f5d413f30bf519f641ca5e1317a5b767aff4ff8291ad7dbed92dcb3eb5a792e325f978fb66f35ea8d8f3197603322d5a4b1ec7fb3049ef75070ad2108bf4efd1a301bdb0be642193e1483ed281be93251bb5eb8cd726cf0cd4689d256dd55ab0ca5c5f973afcfe4b5320cbbb6be84b802b73688fc7204ce77bda39502afc9e4a4f27cde88c4899603197089daa7c7ade50acecb5aef59a73ce911084d5afd58a0f7306fb4d9fbdddc1bc7f38bec5ced6dd4f50d7e93ef697e364896a91d5198119357df9482dc82c2f6945ba5d63bf42a8073bfe533c5cd19d50704692a2c502230f22cfdc05e587fc69646987d54040e1270c6d66da511e484210783698a016d16c2cddd8d196746aa690776e9047ba30875c797d1889298c6e8447f4a3d70a5d23928e471d0a3b7b674e79626ac542e8db147dc6e6ca93394e62253169b699b5cb0a2b40d64eecb2ae13154133a0c5cb9148c457f6f1f2f61ac62014609f8821f325a9a98a99da2c32b2c682456d13815da86e225e7fad4e30b255e0bcc9e1634f7ba2ee55328266cbaa6127da5a1056c0520dcbbe73efb5ed0f3262132d395089de5da990d2c2076f3ae8fa0759115ce23d77a26c9573e380fb4eda87e209b21a758b3ced73df65253b6ddd4402c949dfb7b3a2394265ac9b6aa04d059848a532195742b99ecf0bc5f32fd5f2da289024332bf7a283b7f7d063a778e33f22acd081e75059800ea1d6e49efc35d47cfad214a4e64e42e393b437fc11e1630e20fbec7594489b6cd070854572caae53f45641391700cd37a700cbc1b53f0b2753b2ea768bc7792df52dee185963e6e1522dff99fff0707f003337fc6e364457c65a2a5cc70eb1e6c9e121ab9a92c55cd8788051a78dfa8fa06b913ca8cd5d186082359b9e7c60b89376561ada6180c9817f738034fa3c649a594862fa87cdb814c11c151664988222661705f6ff2c2a2d5730154060d512bad56a2e4e47cde8aef1f0e0ee65b03f7c72e4cb86c13986155e47e95637803a927aa1143a0d23cc7082c4bf47b4389d7807f335d6088366ff72f190f6ae070a037c4d7b6a12bb2d076b0f08294bc675e8853a308342acbb0dbc4df7e8a782b48ae3f9921e00e7bd36d654648383ac51455c1a8ee598a4758d4ed91efcbb2285b02cebe12012ea5c284f55265773d4d4e71d4b085f531e219be19af588d094ff77f84a653c250493ac0b8b5c5905b58c8469639870bb4ef678567f0960b5301fffa01cead2104bf945b14a9cb02fcb18444844baac98e278fba8968d2559e9399bd1e4c97599a27a32abaca28384e160cbe06613591abc2b38a9b74e3a59c128282370a068bf7ce0ac4c00e62744aa1bd14066b2422afa02b58512a0b12c812aa09ebed3ef4df1ab3bac69160e5a8fb68e1540b5136c70cbaf9102b2ab15f78c959c94328f778322e8e7435a2d89613128259dfcf3e2283070787c930d2c25e751dbd3c1b4f469673a355585e9393e1d8230105de911c5a9636ceb0bdc7a973add70bbba0a7e52138f03be511e37c20426a85425a27029797b20f4482dcfba941e5eabd90</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">Hello there, please enter the password.</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <content><![CDATA[<p><img src="/../images/dairy.jpg" alt="|550"></p>
+<blockquote>
+<center>dum spiro, spero.</center>
+</blockquote>
+ <span id="more"></span>
+
+
+<h1 id="2023-07-08-iFly-风洞"><a href="#2023-07-08-iFly-风洞" class="headerlink" title="2023-07-08: iFly 风洞"></a>2023-07-08: iFly 风洞</h1><ul>
+<li>04:24-07:58 <ul>
+<li>3 h 30 min </li>
+<li>Manchester Picadilly</li>
+</ul>
+</li>
+<li>07:58-10:45 <ul>
+<li>2 h 47 min </li>
+<li><a href="https://goo.gl/maps/Jbc9W9hW2PWuraqo7">ifly</a></li>
+</ul>
+</li>
+<li>11:30-13:00 <ul>
+<li>1 h 30 min </li>
+<li>Ifly</li>
+</ul>
+</li>
+<li>13:00-17:55 <ul>
+<li>Manchester </li>
+<li>Picadilly</li>
+</ul>
+</li>
+<li>17:33-21:04 <ul>
+<li>Train</li>
+</ul>
+</li>
+</ul>
+<h1 id="2023-07-18-找供应商"><a href="#2023-07-18-找供应商" class="headerlink" title="2023-07-18: 找供应商"></a>2023-07-18: 找供应商</h1><blockquote>
+<p>作者：吕布<br>链接：<a href="https://zhuanlan.zhihu.com/p/369669629">https://zhuanlan.zhihu.com/p/369669629</a><br>来源：知乎<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  </p>
+</blockquote>
+<h2 id="以女包为例"><a href="#以女包为例" class="headerlink" title="以女包为例"></a>以女包为例</h2><p><strong>1.撒网搜索。</strong><a href="https://www.zhihu.com/search?q=%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">阿里巴巴</a>搜索，女包；会出来N多厂家，然后看他们的<a href="https://www.zhihu.com/search?q=%E6%B3%A8%E5%86%8C%E8%B5%84%E9%87%91&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">注册资金</a>，让他们发工厂照片、<a href="https://www.zhihu.com/search?q=%E8%90%A5%E4%B8%9A%E6%89%A7%E7%85%A7&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">营业执照</a>。百度里面搜索，一样能找到N多<a href="https://www.zhihu.com/search?q=%E4%BE%9B%E5%BA%94%E5%95%86&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">供应商</a>，然后做个excel表格列出<a href="https://www.zhihu.com/search?q=%E5%85%AC%E5%8F%B8%E5%90%8D%E7%A7%B0&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">公司名称</a>，联系方式，地址。把供应商的靠谱程度，分为ABCD几个等级。这是初步筛选。</p>
+<ol>
+<li><strong>实地考察</strong>。我们在<a href="https://www.zhihu.com/search?q=%E5%A5%B3%E5%8C%85&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">女包</a>行业筛选出15~20家供应商，然后我们两三个人到广州挨个工厂联系、考察，觉得比较靠谱的供应商就深入交谈。看了有十几个工厂，它们有样品展示的大概有七八家。样品里面又可以看质量，质量有不靠谱的，比如中低端的，价格低。我们要做的是中高端的，所以 pass 掉了低端厂家。最后选定的这家，样品非常多，而且每个样品的质量都不错、价格也很不错。</li>
+<li><strong>同行比价</strong>。我们选定了同行的一家店，购买了几个包，找到了同行的供货工厂，给的同行价格八九十；然后我们谈的供应商，价格给我们七八十，并且质量还比同行的还要好。</li>
+<li><strong>合作意愿筛选</strong>。还有另外一家做真皮的工厂，价格也低，款式也好，但是他们在淘宝上有自己的店，所以合作意愿没有<strong>单纯专门做供货订单的厂家</strong>强烈。合作意愿也是中小卖家在找供应商时容易忽视的重要因素，因为如果合作意愿不强，你可能盯着他做货，像求着他一样，各种拖延，不稳定，最后坑了自己。我们最后选定的工厂，合作意愿很强烈；结果变成他什么事情都来配合你，迎合你；你就会变得很省事，而且你又很多想不到的地方他都帮你想到了。（划重点）</li>
+<li><strong>压低<a href="https://www.zhihu.com/search?q=%E8%B5%B7%E8%AE%A2%E9%87%8F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">起订量</a></strong> 中小卖家都希望起订量越小越好，起订量要小、价格还要低，往往二者不可兼得，这时候就要用到<a href="https://www.zhihu.com/search?q=%E8%B0%88%E5%88%A4%E6%8A%80%E5%B7%A7&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">谈判技巧</a>。比如：这个包，要订100个才能给你70的价格，你最好能谈到起订20个，也能用70的价格。很多小卖家就是不会谈判压低起订量，后期商品滞销，<a href="https://www.zhihu.com/search?q=%E7%8E%B0%E9%87%91%E6%B5%81%E5%8D%B1%E6%9C%BA&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">现金流危机</a>，把自己搞死了。</li>
+</ol>
+<h3 id="如何谈判压价，压起订量"><a href="#如何谈判压价，压起订量" class="headerlink" title="如何谈判压价，压起订量"></a>如何谈判压价，压起订量</h3><p>这个技巧很重要，单独来说。</p>
+<ul>
+<li>**压价就是<a href="https://www.zhihu.com/search?q=%E5%BF%83%E7%90%86%E5%8D%9A%E5%BC%88&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">心理博弈</a>**，互相试探对方的心理底线。如果自己脸皮薄，一定要找一位会谈价的朋友同去，甚至让朋友假装是你公司的采购，单独前去。老板身份不好谈崩，而采购身份就随便谈了，谈崩了，老板还能出来打圆场。</li>
+<li>**压价到底在压什么？压的是<a href="https://www.zhihu.com/search?q=%E5%88%A9%E6%B6%A6%E7%82%B9&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">利润点</a>**，成本100的东西，140供货给你，<a href="https://www.zhihu.com/search?q=%E6%AF%9B%E5%88%A9%E6%B6%A6&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">毛利润</a> 40。你的量大，可能120就能拿下来。把利润点压低一半，算是很厉害了。</li>
+<li>比如说：这个包，定100个大概是什么价格？对方给了一个价格。然后你再跟他谈，我不定一百个，我就定三十个，行不行？</li>
+<li>你先把起订量说的越小越好，比如20个，对方一口回绝，你可以涨嘛。因为你刚开始说的量小，你可以朝上涨。要是他说100个，你说80个，你就不可以再朝下降了，因为你已经暴露了你的心理底线。</li>
+<li>换成价格，也是一样道理。比如对方说100块，你说70，看看对方什么反应，如果他说了一大堆，意思是绝对不可能合作的，你太没有诚意了，你是来找茬的。那你就朝上涨，比如说75，再看看他什么反应。如果合作意愿比较强烈的，他说的话就会有一点弹性了，那就有可谈的余地。</li>
+<li>即使是你经过筛选后，认定的最希望跟他合作的唯一供应商，也要认真谈判最大限度争取有利价格和方案。</li>
+</ul>
+<h3 id="判断优质供应商的5个维度"><a href="#判断优质供应商的5个维度" class="headerlink" title="判断优质供应商的5个维度"></a>判断优质供应商的5个维度</h3><ul>
+<li><strong>产品创新力</strong>。电商平台卖货，消费者需求升级换代非常快，能够跟你一起敏锐观察产品方向动态，并迅速研发的供应商，对于卖家来说就是如虎添翼。</li>
+<li><strong>成本控制力</strong>。一款产品的<a href="https://www.zhihu.com/search?q=%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">生命周期</a>，从早期蓝海供不应求，到后期价格战不断淘汰同行，对于成本的控制决定了你能生存多久。</li>
+<li><strong>质量可靠度</strong>。产品质量直接决定买家评价，以及售后<a href="https://www.zhihu.com/search?q=%E9%80%80%E8%B4%A7%E7%8E%87&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22:%22article%22,%22sourceId%22:%22369669629%22%7D">退货率</a>，不仅跟利润直接挂钩，还决定了产品是否可以走向爆款。（质量不行，差评不断，新品链接很快就废掉了。所花的选品、策划、测款、烧车、刷单的人力财力全都打水漂）</li>
+<li><strong>服务跟进</strong>。产品功能，页面策划，客户服务，售后维修，退货返厂等等服务，在谈判之初千万别忘记了，一定要写到合同里，对供应商有个约束。</li>
+<li><strong>合作意愿度</strong>。合作意愿，能影响谈价、产品创新跟进速度、售前售后服务等等所有流程的顺畅与否。合作之前，就应该直接 pass 掉合作意愿不强的厂家，尽管他价格再低，也不能选择，否则后期不给力起来，把卖家能气死。</li>
+</ul>
+<h1 id="2023-07-25-List-of-Universities-in-Switzerland"><a href="#2023-07-25-List-of-Universities-in-Switzerland" class="headerlink" title="2023-07-25: List of Universities in Switzerland"></a>2023-07-25: List of Universities in Switzerland</h1><h2 id="City-x2F-Location-Wise-List-of-Universities-in-Switzerland"><a href="#City-x2F-Location-Wise-List-of-Universities-in-Switzerland" class="headerlink" title="City&#x2F;Location Wise List of Universities in Switzerland"></a>City&#x2F;Location Wise List of Universities in Switzerland</h2><p>Mentioned below is the <strong>list of universities in Switzerland</strong> that are functional</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Sl. No</strong></td>
+<td><strong>Name of the University</strong></td>
+<td><strong>Location&#x2F;City</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Language</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>University of Basel</td>
+<td>Basel,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+<tr>
+<td>2</td>
+<td>University of Bern</td>
+<td>Bern,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+<tr>
+<td>3</td>
+<td>University of Fribourg</td>
+<td>Fribourg,  <br>Switzerland</td>
+<td>Public</td>
+<td>French,  <br>German</td>
+</tr>
+<tr>
+<td>4</td>
+<td>University of Geneva</td>
+<td>Geneva,  <br>Switzerland</td>
+<td>Public</td>
+<td>French</td>
+</tr>
+<tr>
+<td>5</td>
+<td>University of Neuchâtel</td>
+<td>Neuchâtel,  <br>Switzerland</td>
+<td>Public</td>
+<td>French</td>
+</tr>
+<tr>
+<td>6</td>
+<td>University of Lausanne</td>
+<td>Lausanne,  <br>Switzerland</td>
+<td>Public</td>
+<td>French</td>
+</tr>
+<tr>
+<td>7</td>
+<td>University of Lucerne</td>
+<td>Lucerne,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+<tr>
+<td>8</td>
+<td>University of Lugano</td>
+<td>Lugano,  <br>Switzerland</td>
+<td>Public</td>
+<td>Italian,  <br>English</td>
+</tr>
+<tr>
+<td>9</td>
+<td>University of St. Gallen</td>
+<td>St. Gallen,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+<tr>
+<td>10</td>
+<td>University of Zurich</td>
+<td>Zurich,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Swiss Federal Institute of Technology Lausanne</td>
+<td>Lausanne,  <br>Switzerland</td>
+<td>Public</td>
+<td>French,  <br>English</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Swiss Federal Institute of Technology Zurich</td>
+<td>Zurich,  <br>Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+</tbody></table>
+<h2 id="Universities-of-Applied-Sciences"><a href="#Universities-of-Applied-Sciences" class="headerlink" title="Universities of Applied Sciences"></a>Universities of Applied Sciences</h2><p>Mentioned-Below is the <strong>list of universities in Switzerland</strong> that provides teaching regarding applied science. Note that some universities have multiple campuses. In that case, we have maintained hare all campus locations.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Sl. No</strong></td>
+<td><strong>Name of the University</strong></td>
+<td><strong>Location&#x2F;City</strong></td>
+<td><strong>Type</strong></td>
+<td><strong>Language</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bern University of Applied Sciences</td>
+<td>Bern, Biel, Burgdorf,  <br>Magglingen, Zollikofen,  <br>Switzerland</td>
+<td>Public</td>
+<td>German</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Basel School of Design</td>
+<td>Basel, Switzerland</td>
+<td>Public</td>
+<td>German</td>
+</tr>
+<tr>
+<td>3</td>
+<td>University of Applied Sciences of Eastern Switzerland</td>
+<td>St. Gallen, Rapperswil, Chur and Buchs, Canton of St. Gallen and Canton of Graubünden, Switzerland</td>
+<td>Public</td>
+<td>German</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Lucerne University of Applied Sciences and Arts</td>
+<td>Lucerne, Canton of Lucerne, Switzerland</td>
+<td>Public</td>
+<td>German</td>
+</tr>
+<tr>
+<td>6</td>
+<td>University of Applied Sciences and Art of Southern Switzerland</td>
+<td>Manno, Canobbio, Brig, Landquart, Locarno, Lugano e Verscio, Canton Ticino, Switzerland</td>
+<td>Public</td>
+<td>Italian</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Zurich University of Applied Sciences</td>
+<td>Zurich, Winterthur &amp; Wädenswil, Canton of Zurich, Switzerland</td>
+<td>Public</td>
+<td>German</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Kalaidos University of Applied Sciences</td>
+<td>Zurich, Bern, St. Gallen,  <br>Basel</td>
+<td>Private</td>
+<td>–</td>
+</tr>
+<tr>
+<td>9</td>
+<td>University of Applied Sciences of Northwest Switzerland</td>
+<td>Brugg-Windisch, Olten,  <br>Basel Peter Merian, Basel,  <br>Muttenz, Switzerland</td>
+<td>Public</td>
+<td>German,  <br>English</td>
+</tr>
+</tbody></table>
+<h1 id="2023-07-28-Hh-项目靶点测试"><a href="#2023-07-28-Hh-项目靶点测试" class="headerlink" title="2023-07-28: Hh 项目靶点测试"></a>2023-07-28: Hh 项目靶点测试</h1><table>
+<thead>
+<tr>
+<th>No.</th>
+<th>Primer</th>
+<th>AF 23</th>
+<th>JA 2</th>
+<th>分类</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>IL-1</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFCC80;">系统性炎症标记物</span></td>
+<td>重要的炎症介素</td>
+</tr>
+<tr>
+<td>2</td>
+<td>IL-6</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFCC80;">系统性炎症标记物</span></td>
+<td>主要用于刺激免疫反应和炎症反应</td>
+</tr>
+<tr>
+<td>3</td>
+<td>IL-10</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#C5E1A5;">免疫调节标记物</span></td>
+<td>主要作用是抑制炎症反应和调节免疫反应</td>
+</tr>
+<tr>
+<td>4</td>
+<td>IL-13</td>
+<td>0</td>
+<td>1</td>
+<td><span style="background-color:#C5E1A5;">免疫调节标记物</span></td>
+<td>IL-13：白细胞介素13，主要作用是调节免疫反应</td>
+</tr>
+<tr>
+<td>5</td>
+<td>IL-17A</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#80CBC4;">肠道炎症标记物</span></td>
+<td>白细胞介素17 A，可以诱导肠道炎症</td>
+</tr>
+<tr>
+<td>6</td>
+<td>IFN-γ</td>
+<td>1</td>
+<td>0</td>
+<td><span style="background-color:#80CBC4;">肠道炎症标记物</span></td>
+<td>干扰素-γ，可以诱导肠道炎症</td>
+</tr>
+<tr>
+<td>7</td>
+<td>IL-22</td>
+<td>0</td>
+<td>1</td>
+<td><span style="background-color:#80CBC4;">肠道炎症标记物</span></td>
+<td>白细胞介素22，对肠道上皮细胞有保护作用，参与肠道炎症反应</td>
+</tr>
+<tr>
+<td>8</td>
+<td>TNF-α</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFCC80;">系统性炎症标记物</span></td>
+<td>肿瘤坏死因子-α，主要参与系统性炎症反应</td>
+</tr>
+<tr>
+<td>9</td>
+<td>S100A8</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFCC80;">系统性炎症标记物</span></td>
+<td>一种炎症相关蛋白，通常在慢性炎症中表达上调</td>
+</tr>
+<tr>
+<td>10</td>
+<td>INOS</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFCC80;">系统性炎症标记物</span></td>
+<td>诱导型一氧化氮合酶，参与一氧化氮的产生，是体内炎症和免疫反应的重要因素</td>
+</tr>
+<tr>
+<td>11</td>
+<td>20-1</td>
+<td>1</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>E-Cadherin</td>
+<td>1</td>
+<td>0</td>
+<td><span style="background-color:#FFAB91;">肠道屏障功能完整性标记物</span></td>
+<td>一种粘附分子，对于维持肠道上皮细胞的紧密连接具有重要作用</td>
+</tr>
+<tr>
+<td>13</td>
+<td>CLAUDIN 2</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFAB91;">肠道屏障功能完整性标记物</span></td>
+<td>肠上皮紧密连接的重要成分，其表达的增加通常与屏障功能的降低有关</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Reg3b</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFAB91;">肠道炎症标记物</span></td>
+<td>一个抗菌蛋白，参与肠道炎症反应</td>
+</tr>
+<tr>
+<td>15</td>
+<td>JAM-1</td>
+<td>1</td>
+<td>0</td>
+<td><span style="background-color:#FFAB91;">肠道屏障功能完整性标记物</span></td>
+<td>连接粘附分子1，也是细胞间连接的一部分，对于维持肠道屏障有重要作用</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Retnlb</td>
+<td>1</td>
+<td>1</td>
+<td><span style="background-color:#FFAB91;">肠道屏障功能完整性标记物</span></td>
+<td>阻抗分子，对于维持肠道上皮屏障有重要作用</td>
+</tr>
+</tbody></table>
+<h1 id="2023-07-29-Mean-with-SD-amp-Mean-with-SEM"><a href="#2023-07-29-Mean-with-SD-amp-Mean-with-SEM" class="headerlink" title="2023-07-29: Mean with SD&amp;Mean with SEM"></a>2023-07-29: Mean with SD&amp;Mean with SEM</h1><p>“Mean with SD” 和 “Mean with SEM” 代表两种不同的统计概念：</p>
+<ol>
+<li><p>Mean with SD (Standard Deviation)：均值与标准偏差。用来衡量<em>一组数据的分散程度</em>。标准偏差越大，数据的变异性越大；标准偏差越小，数据的变异性越小。在数据展示中，</p>
+<ul>
+<li>使用均值与标准偏差可以给出数据的中心位置和数据的分布范围。</li>
+</ul>
+</li>
+<li><p>**Mean with SEM (Standard Error of the Mean)*<em>：均值与均值的标准误。标准误是标准偏差的一种形式，它描述的是</em>样本均值的可变性*。标准误越小，样本均值的精确性越高；反之，标准误越大，样本均值的精确性越低。</p>
+<ul>
+<li>标准误是用于估计总体均值的误差，而标准偏差是用于描述样本的变异性。</li>
+</ul>
+</li>
+</ol>
+<p>总的来说，标准偏差和标准误是衡量不确定性的两种主要方式，但它们关注的焦点略有不同。<strong>标准偏差衡量的是数据本身的分散程度，而标准误衡量的是样本均值的精确性或误差</strong>。在科学研究中，两者都非常重要，选择使用哪种主要取决于研究的目的和需要解答的问题。</p>
+<h1 id="2023-08-02"><a href="#2023-08-02" class="headerlink" title="2023-08-02"></a>2023-08-02</h1><ul>
+<li>动物模型的局限性<ul>
+<li>已经感染 hh 的 microbiota 会导致 stm 感染的干扰</li>
+<li>Hh 感染分泌的 IL 导致 hh 效力减弱</li>
+</ul>
+</li>
+</ul>
+<h1 id="2023-08-15：人名找全论文"><a href="#2023-08-15：人名找全论文" class="headerlink" title="2023-08-15：人名找全论文"></a>2023-08-15：人名找全论文</h1><blockquote>
+<p><a href="http://www.scopus.com/">www.scopus.com</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>日记</tag>
+      </tags>
   </entry>
   <entry>
     <title>Canopy Packing Protocol</title>
@@ -314,17 +791,24 @@
   <entry>
     <title>免疫学学习</title>
     <url>/2023/06/08/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p><img src="/../images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0.gif"></p>
+    <content><![CDATA[<p><img src="/../images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0.gif"></p>
 <span id="more"></span>
-<h1 id="一型免疫，二型，三型分别是什么，有什么区别"><a href="#一型免疫，二型，三型分别是什么，有什么区别" class="headerlink" title="一型免疫，二型，三型分别是什么，有什么区别"></a>一型免疫，二型，三型分别是什么，有什么区别</h1><p>一型、二型和三型免疫是指免疫系统对不同类型病原体的反应方式，它们有不同的特征和功能。</p>
+<h1 id="三种免疫类型"><a href="#三种免疫类型" class="headerlink" title="三种免疫类型"></a>三种免疫类型</h1><blockquote>
+<p>参考资料</p>
 <ol>
-<li><p>一型免疫（Type 1 Immunity）：</p>
-<ul>
-<li>一型免疫主要应对细胞内病原体，例如病毒和细胞内寄生虫。</li>
-<li>这种免疫反应主要由T细胞介导，特别是CD8+细胞（细胞毒性T细胞）和NK细胞（自然杀伤细胞）。</li>
-<li>一型免疫产生的细胞因子主要包括干扰素γ（IFN-γ），它能够激活巨噬细胞和增强细胞毒性，从而帮助清除感染的细胞。</li>
-</ul>
-</li>
+<li><a href="https://academic.oup.com/cid/article/32/1/76/311106">Type 1&#x2F;Type 2 Immunity in Infectious Diseases</a></li>
+<li></li>
+</ol>
+</blockquote>
+<p>T helper type 1 (Th1) lymphocytes secrete <code>interleukin (IL)-2, interferon-γ, and lymphotoxin-α</code> and stimulate type 1 immunity, which is characterized by intense phagocytic activity. </p>
+<p>Conversely, Th2 cells secrete <code>IL-4, IL-5, IL-9, IL-10, and IL-13</code> and stimulate type 2 immunity, which is characterized by high antibody titers. </p>
+<p>Type 1 and type 2 immunity are not strictly synonymous with cell-mediated and humoral immunity, because Th1 cells also stimulate moderate levels of antibody production, whereas Th2 cells actively suppress phagocytosis. For most infections, save those caused by large eukaryotic pathogens, type 1 immunity is protective, whereas type 2 responses assist with the resolution of cell-mediated inflammation. </p>
+<p>Severe systemic stress, immunosuppression, or overwhelming microbial inoculation causes the immune system to mount a type 2 response to an infection normally controlled by type 1 immunity. In such cases, the administration of antimicrobial chemotherapy and exogenous cytokines restores systemic balance, which allows successful immune responses to clear the infection.</p>
+<h2 id="一型免疫（Type-1-Immunity）："><a href="#一型免疫（Type-1-Immunity）：" class="headerlink" title="一型免疫（Type 1 Immunity）："></a>一型免疫（Type 1 Immunity）：</h2><pre><code>- 一型免疫主要应对细胞内病原体，例如病毒和细胞内寄生虫。
+- 这种免疫反应主要由T细胞介导，特别是CD8+细胞（细胞毒性T细胞）和NK细胞（自然杀伤细胞）。
+- 一型免疫产生的细胞因子主要包括干扰素γ（IFN-γ），它能够激活巨噬细胞和增强细胞毒性，从而帮助清除感染的细胞。
+</code></pre>
+<ol start="2">
 <li><p>二型免疫（Type 2 Immunity）：</p>
 <ul>
 <li>二型免疫主要应对外周组织中的寄生虫感染和过敏反应。</li>
@@ -355,6 +839,112 @@
 <li>血小板（Platelets）：它们的前体——巨核细胞（Megakaryocytes）也源自骨髓，血小板在止血和血液凝固中起关键作用。  </li>
 </ol>
 <p><a href="https://lete114.github.io/CardLink">https://Lete114.github.io/CardLink</a></p>
+<h1 id="IL-1"><a href="#IL-1" class="headerlink" title="IL-1"></a>IL-1</h1><p>白细胞介素 1 β（IL 1 β 或 IL 1 B）也称为分解代谢素，是白细胞介素 1 细胞因子家族的成员。IL 1 是一种多效性细胞因子。它参与皮质的炎症反应、细胞生长和组织修复。IL 1超家族由三个成员组成：IL 1 A（IL 1α）、IL 1 B（IL 1β）和 IL 1受体拮抗剂（IL 1 Ra）。</p>
+<h1 id="IL-22"><a href="#IL-22" class="headerlink" title="IL-22"></a>IL-22</h1><blockquote>
+<p>参考资料<br><a href="https://pubmed.ncbi.nlm.nih.gov/25706098/#:~:text=Interleukin%2D22%3A%20immunobiology%20and%20pathology">Interleukin-22: immunobiology and pathology</a></p>
+</blockquote>
+<h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>IL-10家族的细胞因子，产生于</p>
+<ul>
+<li>T helper 17,</li>
+<li>γδ T cells, </li>
+<li>NKT cells, </li>
+<li>A newly described innate lymphoid cells (ILCs)。</li>
+</ul>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><p>IL 22 的功能在许多组织中被确定，包括 <code>intestines, lungs, liver, kidney, thymus, pancreas, and skin.</code></p>
+<p>IL-22 primarily targets <code>nonhematopoietic epithelial and stromal cells</code>, where it can promote proliferation and play a role in tissue regeneration.<br>In addition, IL-22 <code>regulates host defence</code> at barrier surfaces.</p>
+<h1 id="细胞因子受体的类型"><a href="#细胞因子受体的类型" class="headerlink" title="细胞因子受体的类型"></a>细胞因子受体的类型</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>细胞因子受体一般分成四个类型：</p>
+<ol>
+<li><details>  
+<summary>Ⅰ型细胞因子受体（TypeⅠCytokine Receptor）</summary>
+这类受体的特点是，它们在信号传导过程中使用细胞内酪氨酸激酶（JAK，Janus Kinase）作为信号传递中介。当细胞因子与这类受体结合时，这些受体通过激活 JAK 激酶来引发一系列下游信号转导事件。这些受体可以触发细胞增殖、分化以及免疫反应等细胞过程。典型的 Type I 细胞因子受体包括白细胞介素-2受体（IL-2R）、白细胞介素-6受体（IL-6R）、干扰素受体等。
+</details></li>
+<li><details>  
+<summary>Ⅱ型细胞因子受体家族（CRF2/Type ⅡCytokine Receptor）</summary>
+Also denoted HCRII, for helical cytokine receptor, Class II | 这类受体的一个显著特点是，它们在信号传导过程中并不使用 JAK 激酶。相反，它们与蛋白酪氨酸激酶（如 TYK2或其他相关激酶）相互作用，从而传递信号。Type II 细胞因子受体的典型代表包括干扰素γ受体（IFN-γR）等。
+</details></li>
+<li>TNF 超家族受体</li>
+<li>趋化因子受体</li>
+</ol>
+<div class="note no-icon info">
+            <h2 id="二型细胞因子受体"><a href="#二型细胞因子受体" class="headerlink" title="二型细胞因子受体"></a>二型细胞因子受体</h2><p>Ⅱ型细胞因子受体家族，也称 <code>干扰素受体家族</code>（Interferon receptors family）。<br>主要包含Ⅱ型白介素（IL-10，IL-19，IL-20，IL-22等）受体，Ⅰ型干扰素（IFNA，IFNB）受体和Ⅱ型干扰素（IFNG）受体。 <a href="https://www.sciencedirect.com/science/article/abs/pii/S1359610103000972">包括12个蛋白质。</a></p><ol><li>a new human Type I IFN, </li><li>IFN-κ; </li><li>molecules related to IL-10 (IL-19, IL-20, IL-22, IL-24, IL-26)-6</li><li>IFN-λs (IL-28&#x2F;29)</li></ol><p>此类受体的结构特点是：在膜外区近氨基端含有四个保守半胱氨酸残基细无 Trp-Ser-X-Trp-Ser 序列，一般为具有高亲和力的异二聚体或多聚体。<br>II 型细胞因子受体的细胞外结构域由串联 Ig 样结构域组成，细胞内结构域通常与属于 Janus 激酶（JAK）家族的酪氨酸激酶相关。</p>
+          </div>
+
+<h2 id="干扰素及其受体"><a href="#干扰素及其受体" class="headerlink" title="干扰素及其受体"></a>干扰素及其受体</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>两种类型：I 型和 II 型。</p>
+<ul>
+<li>I 型干扰素包含 IFN-α、IFN-β、IFN-v、IFN-d 和 IFN-t，II 型干扰素仅含有 IFN-γ。</li>
+<li>I 型干扰素与其受体相互作用可以激活多种信号转导通路，如抗病毒、抗增殖、免疫调节和发育活性等。</li>
+<li>IFN-t 经鉴定在反刍动物和长颈鹿中含有172个氨基酸，但在人类中不是，当然在人类细胞中也具有活性。IFN-t 由滋养细胞分泌，并在妊娠的建立中发挥关键作用。</li>
+<li>IFN-d 是一种149氨基酸的糖蛋白，其仅由猪滋养层产生。IFN-d 对猪细胞具有高抗病毒活性，但对人细胞没有抗性。</li>
+</ul>
+<p>由于干扰素是具有 <code>强抗病毒活性的糖蛋白</code>，已成为控制慢性病毒感染的有吸引力的治疗选择，被认为是抑制丙型肝炎（HCV）和乙型肝炎（HBV）感染的“护理标准”。<br>在肿瘤治疗方面，包括黑素瘤、肾细胞癌、与 AIDS 相关的卡波西氏肉瘤（KS）、滤泡淋巴瘤、毛细胞白血病和慢性骨髓性白血病（CML）等疾病的治疗已经广泛应用干扰素类试剂。</p>
+<h3 id="IFN-γ"><a href="#IFN-γ" class="headerlink" title="IFN-γ"></a>IFN-γ</h3><div class="note warning">
+            <p>IFN-γ的生物学作用主要以免疫调剂为主，而非抗病毒。</p>
+          </div>
+<p>功能：<br>⑴ <code>对固有免疫系统的调节 </code>：IFN-γ是 Th1细胞对巨噬细胞、中性粒细胞、NK 细胞发出动员令，是迄今各入活化状态的主要信号分子。IFN-γ是促炎细胞因子的典型代表，还能够诱导单核巨噬细胞分泌其他细胞因子，如 IL-1、IL-6、IL-8、IL-12和 IFN-α等。</p>
+<p>⑵ <code>影响T细胞和B细胞的调节</code>：IFN-γ促进 Th1细胞分化，对 Th2细胞则有负性调节作用。IFN-γ除抑制 Th2细胞产生 IL-4外，还抑制 IL-4本身对 B 细胞的作用，促进 IgG 的产生，阻断 B 细胞合成抗体分子向 IgE 的类别转换。</p>
+<p>⑶ <code>对抗原呈递细胞的调节</code>：几乎所有的细胞都表达 IFN-γ受体，因此 IFN-γ的作用十分广泛。它不仅能使细胞的 MHCⅠ类分子表达水平显著上调，还能诱导 MHCⅡ阴性的上皮细胞和内皮细胞表达 MHCⅡ类分子，使他们也能通过外源性途径执行抗原呈递作用。</p>
+<h2 id="IL-10家族及其受体"><a href="#IL-10家族及其受体" class="headerlink" title="IL-10家族及其受体"></a>IL-10家族及其受体</h2><p><img src="/../images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0/II_Cytokine_Receptors.png"></p>
+<h3 id="介绍-IL-10家族细胞因子"><a href="#介绍-IL-10家族细胞因子" class="headerlink" title="介绍 IL-10家族细胞因子"></a>介绍 IL-10家族细胞因子</h3><h4 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h4><ol>
+<li>IL-10家族由9个成员组成 IL-10，IL-19，IL-20，IL-22，IL-24，IL-26以及较远的 IL-28 A、IL-28 B 和 IL-29。<ul>
+<li>IL-10家族配体主要根据其生物学功能可分为三个亚组。第一组只含有 IL-10本身。第二组，即 IL-20亚家族配体，由 IL-19、IL-20、IL-22、IL-24和 IL-26组成。最后一组是 III 型干扰素组（或干扰素λs），包含密切相关的细胞因子 IL-28A、IL-28B 和 IL-29。</li>
+</ul>
+</li>
+<li>IL-10家族在适应性免疫前出现，感染期间，引发不同的宿主防御机制，尤其是上皮细胞。</li>
+<li>IL-10 家族和 IFN 家族组成了二类细胞因子家族（Class II cytokine family）。</li>
+<li>IL-10家族成员的多效活性由特定的细胞表面受体复合体介导，每个复合体由R1链和R2链组成，二者都是II类细胞因子受体家族（CRF2）成员。</li>
+</ol>
+<div class="note no-icon info">
+            <h4 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h4><p>白介素 IL-10是活化晚期的 <code>Th2细胞，CD8+T 细胞、单核巨噬细胞及活化B细胞</code> 分泌的细胞因子，其主要功能是 <code>抑制Th1细胞合成IL-2和IFN-γ</code>，有助于适应性免疫性应答向 Th 2型偏移。</p><p>白介素 IL-10还具有 <code>抑制 NK 和巨噬细胞产生细胞因子的功能</code>。白介素 IL-10能够与有丝分裂原协同作用，促进 B 细胞的增殖和抗体产生。白介素 IL-22能够促进 T 细胞合成 IL-4、IL-19、和 IL-20，作用于角质细胞，以旁分泌或者自分泌的形式调节其对炎症刺激的应答。IL-21则作用域肝细胞，诱导急性蛋白的产生。IL-28 A、IL-28 B 和 IL-29存在于人和其他哺乳动物中，并且有一些类似于 I 型 IFN 的功能。</p>
+          </div>
+
+<h4 id="功能-1"><a href="#功能-1" class="headerlink" title="功能"></a>功能</h4><ol>
+<li>该家族的成员可以 <code>促进组织上皮的先天免疫反应，以限制病毒和细菌感染造成的损害 </code>。promote</li>
+<li>这些细胞因子还可以 <code>促进感染或炎症引起的损伤的组织愈合过程</code>。facilitate</li>
+<li>IL-10 本身可以 <code>抑制促炎反应并限制炎症引起的不必要的组织破坏</code>。repress</li>
+</ol>
+<h3 id="信号通路-IL-10家族"><a href="#信号通路-IL-10家族" class="headerlink" title="信号通路 IL-10家族"></a>信号通路 IL-10家族</h3><ul>
+<li>所有 IL-10家族细胞因子，包括 IL-10本身，都通过结合 II 类细胞因子受体家族的成员发出信号。<br>这些 IL-10家族配体通过由两条不同的受体链（IL-10RA 和 IL-10RB）组成的受体复合体发出信号，主要激活 Jak-Stat 信号转导途径。配体结合诱导受体亚单位的寡聚化。<br>IL-10通过 IL-10RA&#x2F;IL-10RB 发出信号，导致 Stat3磷酸化，<code>Stat3是 IL-10免疫抑制作用的关键转录因子</code>。</li>
+<li>IL-19、IL-20和 IL-24通过 IL-20RA&#x2F;IL-20RB 受体复合物诱导其信号传导。然而，IL-20和 IL-24优先与 IL22RA1&#x2F;IL-20RB 受体复合物结合。IL-22和 IL-26通过由 IL-22RA1&#x2F;IL-10RB 或 IL-20RA&#x2F;IL-10RB 组成的受体复合物发挥作用。有趣的是，IL-20亚家族也可以激活 Stat3，但其结果与 IL-10激活的结果不同。Stat3信号传导的不同作用的分子机制仍不清楚。<br><img src="/../images/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%AD%A6%E4%B9%A0/IL10%E5%AE%B6%E6%97%8F%E4%BF%A1%E5%8F%B7%E9%80%9A%E8%B7%AF.jpeg"><center>IL 10家族信号通路</center></li>
+</ul>
+<h3 id="介绍-IL-10家族受体"><a href="#介绍-IL-10家族受体" class="headerlink" title="介绍 IL-10家族受体"></a>介绍 IL-10家族受体</h3><div class="note warning">
+            <p>白细胞介素10 (IL-10) 通过由 <code>两个IL-10受体1 (IL-10R1)</code> 和 <code>两个IL-10受体2 (IL-10R2)</code> 组成的受体复合物发出信号。<br>IL-10 is a pleiotropic cytokine 多效性细胞因子</p>
+          </div>
+
+<p>两个亚基均属于 II 类细胞因子受体家族。</p>
+<ul>
+<li>IL-10R1 在造血细胞（例如 T、B、NK、肥大细胞和树突细胞）上表达</li>
+<li>而 IL-10R2 亚基则普遍表达。<br>细胞表面 IL-10 受体 (IL-10R) 复合物的组装是启动调节肠道炎症、病毒持久性甚至肿瘤监测的 IL-10 信号通路的第一步。</li>
+</ul>
+<blockquote>
+<p><a href="https://cn.sinobiological.com/research/cytokines/il-10-receptor">参考资料</a></p>
+</blockquote>
+<h1 id="免疫检查点"><a href="#免疫检查点" class="headerlink" title="免疫检查点"></a>免疫检查点</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>免疫检查点（Immune Checkpoints）是免疫应答过程中 <code>调节 T 细胞受体（TCR）抗原识别的一种信号</code>，可以分为以下两类：  </p>
+<ol>
+<li><a href="https://cn.sinobiological.com/research/immune-checkpoint/co-stimulatory-immune-checkpoint">共刺激免疫检查点</a>：促进免疫进程，如 CD28、ICOS、CD137 </li>
+<li><a href="https://cn.sinobiological.com/research/immune-checkpoint/co-inhibitory-immune-checkpoint">共抑制免疫检查点</a>：抑制免疫进程，如PD1、CTLA-4、VISTA等。<br>当免疫系统攻击病原体时，这些免疫检查点分子可以保护正常组织免受侵害。癌细胞通过使免疫检查点相关蛋白失调而巧妙地逃避免疫攻击。免疫检查点疗法通过共刺激信号的激动剂或抑制信号的拮抗剂调节免疫系统功能。  <div class="note no-icon info">
+            <p>近年来积极研究两种免疫检查点受体：<br>细胞毒性 T 淋巴细胞抗原4（CTLA4；又称 CD152）和程序性细胞死亡蛋白1（PD1；又称 CD279）。相应的抗体可以抑制受体的功能，从而提高机体抗肿瘤的免疫力。此外，其他多个具有抗癌治疗前景的免疫检查点正在积极开发中，基于免疫检查点的更多癌症治疗药物正在上市。</p>
+          </div></li>
+</ol>
+<h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>它们帮助控制免疫系统的活性，以避免过度的免疫反应，同时也确保免疫系统对于抵御病原体和异常细胞的作用。</p>
+<h2 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h2><p>免疫检查点分子在细胞表面或细胞内部，特别是 T 细胞和抗原呈递细胞（如树突状细胞）上。发挥作用，它们可以传递信号，影响免疫细胞如 T 细胞的活性。这些分子可以有两种作用：共刺激信号和共抑制信号。</p>
+<div class="note no-icon info">
+            <ol><li>共刺激信号（Co-stimulatory signals）：这些信号会增强免疫细胞的活性，促使其更好地攻击异常细胞。例如，CD28是一种共刺激分子，它在T细胞上与抗原呈递细胞（如树突状细胞）表面的B7分子相互作用，从而促使T细胞充分激活。</li><li>共抑制信号（Co-inhibitory signals）：这些信号可以抑制免疫细胞的活性，以防止过度的免疫反应。免疫检查点抑制信号在正常情况下有助于维持免疫平衡，但有时恶性肿瘤细胞或其他异常细胞会利用这些信号来逃避免疫系统的攻击。例如，CTLA-4和PD-1是两种常见的免疫检查点分子，它们可以通过与它们的配体结合，抑制T细胞的活性，使得恶性肿瘤能够逃避免疫系统的攻击。</li></ol>
+          </div>
+
+<details>  
+   <summary>PS：常见的免疫检查点分子，以及它们在哪些细胞上表达</summary>  
+
+<ol>
+<li>PD-1（Programmed Cell Death Protein 1）：PD-1主要表达在激活的 T 细胞、B 细胞、NK 细胞（自然杀伤细胞）等免疫细胞上。它的配体 PD-L 1通常由多种细胞类型，包括肿瘤细胞、抗原呈递细胞和炎症细胞，表达在细胞表面。</li>
+<li>CTLA-4（Cytotoxic T-Lymphocyte-Associated Protein 4）：CTLA-4主要表达在 T 细胞的表面。它与 CD 28是一对免疫共刺激分子，但它的活性是抑制性的，可以抑制 T 细胞的活性。</li>
+<li>TIM-3（T Cell Immunoglobulin and Mucin Domain 3）：TIM-3通常表达在激活的 T 细胞、NK 细胞等免疫细胞上。</li>
+<li>LAG-3（Lymphocyte Activation Gene 3）：LAG-3表达在激活的 T 细胞、B 细胞等免疫细胞上。</li></ol></details>
+
+<p>近年来，针对免疫检查点的治疗策略已经成为肿瘤免疫治疗的重要组成部分。免疫检查点抑制剂（例如抗 CTLA-4抗体和抗 PD-1&#x2F;PD-L1抗体）可以解除免疫细胞的抑制，使得免疫系统重新对肿瘤细胞产生攻击。这些治疗方法已经在多种癌症类型中显示出潜在的显著疗效。</p>
+<h2 id="以-PD1为例"><a href="#以-PD1为例" class="headerlink" title="以 PD1为例"></a>以 PD1为例</h2><p>当谈论免疫检查点时，一个经常被提到的例子是 PD-1（Programmed Cell Death Protein 1）及其配体 PD-L1（Programmed Death-Ligand 1）。这对分子在免疫调节中扮演着重要角色，特别是在免疫应答的平衡和调控方面。</p>
+<p>PD-1是一种共抑制免疫检查点分子，存在于活化的T细胞、B细胞和一些其他免疫细胞上。当T细胞受到抗原刺激后，PD-1被表达，它与配体PD-L1结合，这个配体通常由肿瘤细胞或炎症细胞表达。这个结合过程实际上抑制了T细胞的活性，从而防止过度免疫反应。</p>
+<p>这个机制在某些情况下可以被恶性肿瘤利用。癌症细胞可能过表达PD-L1，使其能够与T细胞上的PD-1结合，从而抑制T细胞的攻击。这种情况下，免疫系统无法有效地识别和攻击癌症细胞，因为这些细胞可以通过操纵PD-1&#x2F;PD-L1通路来逃避免疫监测。</p>
+<p>因此，免疫治疗中的一种策略是使用抗PD-1或抗PD-L1抗体。这些药物可以阻止PD-1与PD-L1的结合，从而恢复T细胞的活性，使其能够更有效地攻击癌症细胞。这类药物已经在多种癌症类型中显示出潜在的疗效，例如黑色素瘤、肺癌等。</p>
 ]]></content>
       <categories>
         <category>学习</category>
@@ -362,7 +952,7 @@
       </categories>
   </entry>
   <entry>
-    <title>如何将 Hexo 与 Jupyter Notebook 进行整合</title>
+    <title>Hexo与Jupyter Notebook整合</title>
     <url>/2023/06/07/%E5%B0%86%20Hexo%20%E4%B8%8E%20Jupyter%20Notebook%20%E8%BF%9B%E8%A1%8C%E6%95%B4%E5%90%88/</url>
     <content><![CDATA[<p><img src="https://jupyter.org/assets/share.png"><br>jupyter notebook 是算法工程师进行数据分析和单机的离线实验时经常使用的工具。除了代码管理以外，还可以方便地展示中间结果。并且支持 markdown，可以将代码和笔记放在一起。此外它的外观也很简洁，适合直接放在网站中展示。</p>
 <span id="more"></span>
@@ -461,6 +1051,7 @@
 </ol>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;iframe src=&quot;your_URL&quot; width=&quot;700&quot; height=&quot;500&quot;&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
+        <category>学习</category>
         <category>CS</category>
       </categories>
   </entry>
@@ -546,6 +1137,7 @@
 </blockquote>
 ]]></content>
       <categories>
+        <category>学习</category>
         <category>CS</category>
         <category>前端</category>
       </categories>
@@ -1169,6 +1761,7 @@ table td{border-bottom:1px solid #333;border-right:1px solid #333;font-size:13px
 </ul>
 <h5 id="面粉"><a href="#面粉" class="headerlink" title="面粉"></a>面粉</h5>]]></content>
       <categories>
+        <category>生活</category>
         <category>食谱</category>
       </categories>
       <tags>
@@ -19881,6 +20474,7 @@ table td{border-bottom:1px solid #333;border-right:1px solid #333;font-size:13px
 </ul>
 ]]></content>
       <categories>
+        <category>生活</category>
         <category>锻炼</category>
       </categories>
       <tags>
